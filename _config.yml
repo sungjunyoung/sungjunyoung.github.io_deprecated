@@ -7,7 +7,7 @@ author:
   email: "wnsdud1861@gmail.com"
 
 # Build settings
-baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /blog/ # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
