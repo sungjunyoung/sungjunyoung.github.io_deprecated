@@ -4,7 +4,7 @@
  <title>Junyoung's Blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-03-06T16:41:55+09:00</updated>
+ <updated>2017-03-06T16:49:41+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
@@ -14,36 +14,13 @@
  
 
  <entry>
-   <title>First blog post</title>
-   <link href="http://localhost:4000/hello-world"/>
-   <id>http://localhost:4000/hello-world</id>
-   <updated>2017-02-10T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;코드블럭 테스트&lt;/p&gt;
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;리스트 테스트&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four
-    &lt;ul&gt;
-      &lt;li&gt;Four-1&lt;/li&gt;
-      &lt;li&gt;Four-2
-        &lt;ul&gt;
-          &lt;li&gt;Four-2-1&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;심플코드 테스트&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;hello world&lt;/code&gt;&lt;/p&gt;
+   <title>Hello World</title>
+   <link href="http://localhost:4000/Hello-World"/>
+   <id>http://localhost:4000/Hello-World</id>
+   <updated>2016-10-17T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;글재주는 없지만..&lt;br /&gt;
+이전에 겪었던 이슈나 앞으로 겪게될 문제 / 해결 했던 것들을 여기에 정리하려 합니다.&lt;br /&gt;
+구경하다가세요 ㅎㅎ&lt;/p&gt;
 </content>
  </entry>
 

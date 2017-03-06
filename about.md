@@ -3,7 +3,6 @@ layout: page
 title: ABOUT
 description: About Junyoung
 ---
-## About
-I'm a developer from KOREA
-
-## Features
+## About  
+_  
+I am developer, This page will be updated
