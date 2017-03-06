@@ -1,14 +1,13 @@
 # Site settings
-title: Monochrome | A minimal, responsive Jekyll blog theme
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
+title: JUNYOUNGBLOG | 성주녕의 이것저것블로그
+description: "이것저것 블로그"
 url: "http://www.dyutibarma.github.io/monochrome"
 author:
-  name: "The Review Index"
-  email: "dyutibarma@gmail.com"
-  url: "https://thereviewindex.com"
+  name: "JUNYOUNGBLOG"
+  email: "wnsdud1861@gmail.com"
 
 # Build settings
-baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
