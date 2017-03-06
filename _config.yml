@@ -1,13 +1,13 @@
 # Site settings
-title: JUNYOUNGBLOG | 성주녕의 이것저것블로그
+title: Junyoung's Blog
 description: "이것저것 블로그"
-url: "http://www.dyutibarma.github.io/monochrome"
+url: "sungjunyoung.github.io"
 author:
   name: "JUNYOUNGBLOG"
   email: "wnsdud1861@gmail.com"
 
 # Build settings
-baseurl: /blog/ # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
