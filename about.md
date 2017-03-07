@@ -17,8 +17,8 @@ description: About Junyoung
 
 ## Career
 \_<br>
-경희대학교 컴퓨터공학과 - 2012.3 ~ NOW<br>
-노마드스타 서버개발 인턴 - 2016.8 ~ 2017.3
+- 경희대학교 컴퓨터공학과 - 2012.3 ~ NOW<br>
+- 노마드스타 서버개발 인턴 - 2016.8 ~ 2017.3
 
 ## Announcement
 \_<br>
@@ -28,13 +28,13 @@ description: About Junyoung
 
 ## Experience
 \_<br>
-AWS Services - EC2, S3, RDS, Dynamodb, Lambda<br>
-MEAN stack<br>
-PHP + codeigniter<br>
-Medium-skilled Java, C++<br>
-Beginner Python
+- AWS Services - EC2, S3, RDS, Dynamodb, Lambda<br>
+- MEAN stack<br>
+- PHP + codeigniter<br>
+- Medium-skilled Java, C++<br>
+- Beginner Python
 
 ## Contact
 \_<br>
-email - wnsdud1861@gmail.com<br>
-facebook - https://www.facebook.com/wnsdud1861<br>
+- email - wnsdud1861@gmail.com<br>
+- facebook - https://www.facebook.com/wnsdud1861<br>
