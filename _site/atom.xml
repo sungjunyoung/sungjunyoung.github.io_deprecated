@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Junyoung's Blog</title>
+ <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-03-06T21:42:56+09:00</updated>
+ <updated>2017-03-07T11:19:27+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
@@ -14,10 +14,36 @@
  
 
  <entry>
+   <title>Test</title>
+   <link href="http://localhost:4000/test"/>
+   <id>http://localhost:4000/test</id>
+   <updated>2017-03-07T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;code block test&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;123123&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ㅁㅇㄹㄴㄹㅁㄹㅁㅇㄴㄹ&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ㅁㅇㄴㄹㅁㄴㅇ&lt;/li&gt;
+  &lt;li&gt;-ㅁㄴㅇㄹㅁㄴㅇㄹ&lt;/li&gt;
+  &lt;li&gt;ㅁㄴㅇㄹㄴㅇㅁㄹㄴㅁㅇㄹ&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+
+ 
+
+ <entry>
    <title>Hello World</title>
    <link href="http://localhost:4000/Hello-World"/>
    <id>http://localhost:4000/Hello-World</id>
-   <updated>2016-10-17T00:00:00+09:00</updated>
+   <updated>2017-03-06T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;글재주는 없지만..&lt;br /&gt; 이전에 겪었던 이슈나 앞으로 겪게될 문제와 해결 했던 것들을 여기에 정리하려 합니다.&lt;/p&gt; &lt;p&gt;첫글이라 쓸말이 없어 현재 블로그의 스택을 잠깐 말하자면,&lt;br /&gt; Jekyll + Github Page 기반의 블로그입니다.&lt;/p&gt; &lt;p&gt;Jekyll 테마는 &lt;a href=&quot;https://github.com/dyutibarma/monochrome&quot;&gt;monochrome&lt;/a&gt;이고, 약간 변형해서 사용하고 있습니다.&lt;/p&gt; &lt;p&gt;disqus 를 달아 댓글 기능을 추가하고, 문구와 네비게이션 바를 수정했습니다.&lt;br /&gt; google...</content>
  </entry>
 
