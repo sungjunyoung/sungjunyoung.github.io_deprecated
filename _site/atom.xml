@@ -4,38 +4,12 @@
  <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-03-07T11:19:27+09:00</updated>
+ <updated>2017-03-08T11:05:05+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
    <email>wnsdud1861@gmail.com</email>
  </author>
-
- 
-
- <entry>
-   <title>Test</title>
-   <link href="http://localhost:4000/test"/>
-   <id>http://localhost:4000/test</id>
-   <updated>2017-03-07T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;code block test&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;123123&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ㅁㅇㄹㄴㄹㅁㄹㅁㅇㄴㄹ&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ㅁㅇㄴㄹㅁㄴㅇ&lt;/li&gt;
-  &lt;li&gt;-ㅁㄴㅇㄹㅁㄴㅇㄹ&lt;/li&gt;
-  &lt;li&gt;ㅁㄴㅇㄹㄴㅇㅁㄹㄴㅁㅇㄹ&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
- </entry>
 
  
 
