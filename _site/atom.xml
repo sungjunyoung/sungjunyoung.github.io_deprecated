@@ -4,12 +4,22 @@
  <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-03-08T11:05:05+09:00</updated>
+ <updated>2017-03-13T23:01:12+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
    <email>wnsdud1861@gmail.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Apache Beam</title>
+   <link href="http://localhost:4000/apache-beam"/>
+   <id>http://localhost:4000/apache-beam</id>
+   <updated>2017-03-13T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;img/beam_logo_s.png&quot; alt=&quot;Beam Logo&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;GSoC&lt;/a&gt;에 참가하기 위해 프로젝트 리스트를 보다가 &lt;a href=&quot;https://beam.apache.org/&quot;&gt;Apache Beam&lt;/a&gt;을 알게되었습니다. Apache Beam 프로젝트는 스트리밍 데이터 처리 작업을 할 수 있도록 프로그래밍 모델을 제공합니다.&lt;/p&gt; &lt;p&gt;현재 도큐멘테이션이 미완인 상태인데, GSoC(Google Summer of Code) 에서 기존 셰익스피어의 단어 빈도를 기본 TF-IDF로 분석하는 예제보다 &lt;a href=&quot;https://issues.apache.org/jira/browse/BEAM-1439?filter=12339687&quot;&gt;더 확장되고 고급화된...</content>
+ </entry>
 
  
 

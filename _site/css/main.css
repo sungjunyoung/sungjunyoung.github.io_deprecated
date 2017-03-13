@@ -24,7 +24,7 @@ html {
       font-size: 18px; } }
 
 body {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 10px; }
 
@@ -95,7 +95,9 @@ body {
   color: #333; }
 
 /*- Typography for medium and small screen, based on 16px font-size -*/
-p, ul, ol {
+ol,
+p,
+ul {
   font-size: 1em;
   /* 16px */
   line-height: 1.5em;
@@ -116,10 +118,13 @@ h2 {
   /* 24px/16px */
   line-height: 1em;
   /* 24px/24px */
-  padding: 1em 0 0 0;
+  padding: 1em 0 0;
   /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   font-size: 1.125em;
   /* 18px/16px */
   line-height: 1.3334em;
@@ -128,23 +133,21 @@ h3, h4, h5, h6 {
   /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
 blockquote {
-  font-style: italic;
-  margin: 1.5em;
-  /* 24px/18px */
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #f2f2f2;
-  padding: 0 1.5em;
-  /* 24px/18px */ }
-  blockquote p, blockquote ul, blockquote ol {
-    padding: 1.5em 0;
-    /* 24px/18px */ }
+  border-left: 4px solid #dddddd;
+  padding: 5px 15px;
+  color: #777777; }
+
+blockquote > :first-child {
+  margin-top: 0; }
+
+blockquote > :last-child {
+  margin-bottom: 0; }
 
 /*- Typography for big screen, based on 18px font-size -*/
 @media (min-width: 940px) {
-  p, ul, ol {
+  ol,
+  p,
+  ul {
     font-size: 1em;
     /* 18px */
     line-height: 1.3334em;
@@ -165,10 +168,13 @@ blockquote {
     /* 36px/18px */
     line-height: 1.3334em;
     /* 48px/36px */
-    padding: 0.66667em 0 0 0;
+    padding: 0.66667em 0 0;
     /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */ }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: 1.3334em;
     /* 24px/18px */
     line-height: 1em;
@@ -177,19 +183,15 @@ blockquote {
     /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
 
   blockquote {
-    font-style: italic;
-    margin: 1.3334em;
-    /* 24px/18px */
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #f2f2f2;
-    padding: 0 1.33334em;
-    /* 24px/18px */ }
-    blockquote p, blockquote ul, blockquote ol {
-      padding: 1.33334em 0;
-      /* 24px/18px */ } }
+    border-left: 4px solid #dddddd;
+    padding: 5px 15px;
+    color: #777777; }
+
+  blockquote > :first-child {
+    margin-top: 0; }
+
+  blockquote > :last-child {
+    margin-bottom: 0; } }
 /* -- General Layout -- */
 /* Navigation */
 #nav a, #nav-left a {
@@ -414,8 +416,7 @@ img[title="Monochrome"] {
   box-shadow: 0 2px 6px #ddd; }
 
 code {
-  color: #8c8c8c;
-  background-color: white; }
+  color: #8c8c8c; }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
 .content ul, .content ol {
@@ -719,3 +720,7 @@ footer {
 
 /* Literal.Number.Integer.Long */
 /*- Custom style -*/
+pre {
+  background-color: #F8F8F8;
+  white-space: pre-wrap;
+  padding: 15px; }
