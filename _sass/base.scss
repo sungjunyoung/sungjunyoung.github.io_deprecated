@@ -52,7 +52,7 @@ a {
 	font-weight: 700;
 	&:hover,
 	&:focus {
-		color: lighten($text-color, 40%);
+		color: lighten($text-color, 20%);
 	}
 }
 
