@@ -40,7 +40,7 @@ html {
 }
 
 body {
- max-width: 800px;
+ max-width: 900px;
  margin: 0 auto;
  padding: 0 10px;
 }
@@ -52,7 +52,7 @@ a {
 	font-weight: 700;
 	&:hover,
 	&:focus {
-		color: darken($text-color, 5%);
+		color: lighten($text-color, 40%);
 	}
 }
 
