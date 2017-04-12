@@ -4,7 +4,7 @@ title: ABOUT
 description: About Junyoung
 ---
 
-![profile](img/profileImage.png)
+![profile](/img/profileImage.png)
 
 ## Name
 \_<br>

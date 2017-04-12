@@ -14,7 +14,7 @@ API-Gateway 단의 Integration response 를 커스텀하는 방법과, Lambda Pr
 
 API-Gateway 에서 메소드를 선택해 Integration Request 메뉴로 들어갑니다.
 
-![integration_request_api_gateway](img/integration_request_api_gateway.png)
+![integration_request_api_gateway](/img/integration_request_api_gateway.png)
 > /users/{user_id}/email PUT : 해당 유저의 email 을 변경하는 API 입니다.
 
 use Lambda Proxy integration 체크박스를 체크해줍니다. 이렇게 하게 되면, Lamba Function 에서 event Object 의 구조가 바뀌게 되는데, 예를들어 path 로 넘겨준 파라미터는,
@@ -127,7 +127,7 @@ context.fail(null);
 return;
 ```
 
-![api-gateway-headers](img/api_gateway_headers.png)
+![api-gateway-headers](/img/api_gateway_headers.png)
 > HTTP Status code / Response Body, Headers 가 넘어온 API-Gateway 테스트 화면
 
 이렇게 400 Bad Request 와 함께 에러코드를 받아볼 수 있게됩니다.
