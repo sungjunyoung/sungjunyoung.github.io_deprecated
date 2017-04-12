@@ -39,7 +39,7 @@ API-Gateway 에서 해당 버튼을 누르고,
 > X-Requested-With 는 해당 요청이 Ajax 라는 것을 의미하며,
  서버에서는 미리 준비를 하게 됩니다.
 > 
-> 참고) https://remysharp.com/2011/04/21/getting-cors-working
+> 참고) [https://remysharp.com/2011/04/21/getting-cors-working](https://remysharp.com/2011/04/21/getting-cors-working)
 
 방금 CORS 를 허용한 리소스 내의 메서드를 클릭하여 Method Response 로 들어갑니다.
 
