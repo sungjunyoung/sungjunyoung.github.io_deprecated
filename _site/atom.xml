@@ -4,7 +4,7 @@
  <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-03-14T11:36:56+09:00</updated>
+ <updated>2017-04-12T15:47:37+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
@@ -14,11 +14,41 @@
  
 
  <entry>
+   <title>SSH Key 등록으로 패스워드 없이 SSH 접속하기</title>
+   <link href="http://localhost:4000/ssh-register"/>
+   <id>http://localhost:4000/ssh-register</id>
+   <updated>2017-04-12T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;ssh 접속 시 계속 비밀번호를 입력하는게 여간 귀찮지 않을수가 없습니다. ssh key 등록을 통해 비밀번호를 입력하지 않고 접속하는 방법입니다.&lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt;SSH Key 생성하기&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ssh-keygen -t rsa Generating public/private rsa key pair. Enter file &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;which to save the key &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/Users/&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;USER&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;/.ssh/id_rsa&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:...</content>
+ </entry>
+
+ 
+
+ <entry>
    <title>Apache Beam</title>
    <link href="http://localhost:4000/apache-beam"/>
    <id>http://localhost:4000/apache-beam</id>
    <updated>2017-03-13T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;img/beam_logo_s.png&quot; alt=&quot;Beam Logo&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;GSoC&lt;/a&gt;에 참가하기 위해 프로젝트 리스트를 보다가 &lt;a href=&quot;https://beam.apache.org/&quot;&gt;Apache Beam&lt;/a&gt;을 알게되었습니다. Apache Beam 프로젝트는 스트리밍 데이터 처리 작업을 할 수 있도록 프로그래밍 모델을 제공합니다.&lt;/p&gt; &lt;p&gt;현재 도큐멘테이션이 미완인 상태인데, GSoC(Google Summer of Code) 에서 기존 셰익스피어의 단어 빈도를 기본 TF-IDF로 분석하는 예제보다 &lt;a href=&quot;https://issues.apache.org/jira/browse/BEAM-1439?filter=12339687&quot;&gt;더 확장되고 고급화된...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>AWS Lambda Proxy Integration 활용</title>
+   <link href="http://localhost:4000/more-usage-lambda-proxy-integration"/>
+   <id>http://localhost:4000/more-usage-lambda-proxy-integration</id>
+   <updated>2017-03-07T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;지금까지 작성한 API 들은 성공이든 실패든 HTTP status 200 OK 를 던져주고 에러 코드나 메세지 등으로 구분하여 작성했습니다. 이번 서비스를 준비하면서 좀더 표준적인 API 설계를 해보고 싶어서 상태 코드로 에러를 분류하는 방법을 시도해 보았고, 고심 끝에 (…) 나온 방법들을 공유합니다.&lt;/p&gt; &lt;p&gt;API-Gateway 단의 Integration response 를 커스텀하는 방법과, Lambda Proxy Integration...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>mongodb 올바르게 유저 생성하기</title>
+   <link href="http://localhost:4000/mongodb-auth-correctly"/>
+   <id>http://localhost:4000/mongodb-auth-correctly</id>
+   <updated>2017-03-07T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;use admin &lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;db.createUser&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;user: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_ID&quot;&lt;/span&gt;, &lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_PASSWO&quot;&lt;/span&gt;, roles:[&lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]})&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;mongodb 서버를 재시작 한 후, 외부에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;--auth&lt;/code&gt; 플래그를 주고 root 계정으로 로그인합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo...</content>
  </entry>
 
  

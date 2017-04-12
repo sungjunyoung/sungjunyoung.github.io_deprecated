@@ -149,9 +149,33 @@
 	
 
 	  <li class="post">
+	  	<h2><a href="/ssh-register">SSH Key 등록으로 패스워드 없이 SSH 접속하기</a></h2>
+      <time datetime="2017-04-12T00:00:00+09:00" class="by-line"> <i>12 Apr 2017</i> </time>
+	  	<p>ssh 접속 시 계속 비밀번호를 입력하는게 여간 귀찮지 않을수가 없습니다. ssh key 등록을 통해 비밀번호를 입력하지 않고 접속하는 방법입니다. SSH Key 생성하기 ssh-keygen -t rsa Generating public/private rsa key pair. Enter file in which to save the key (/Users/{USER}/.ssh/id_rsa): Enter passphrase (empty for no passphrase): Enter same passphrase again: Your...</p>
+	  </li>
+
+    
+
+	  <li class="post">
 	  	<h2><a href="/apache-beam">Apache Beam</a></h2>
       <time datetime="2017-03-13T00:00:00+09:00" class="by-line"> <i>13 Mar 2017</i> </time>
 	  	<p>GSoC에 참가하기 위해 프로젝트 리스트를 보다가 Apache Beam을 알게되었습니다. Apache Beam 프로젝트는 스트리밍 데이터 처리 작업을 할 수 있도록 프로그래밍 모델을 제공합니다. 현재 도큐멘테이션이 미완인 상태인데, GSoC(Google Summer of Code) 에서 기존 셰익스피어의 단어 빈도를 기본 TF-IDF로 분석하는 예제보다 더 확장되고 고급화된 파이프라인을 작성하는 이슈가 올라와 있어 열심히 분석중입니다. Apache...</p>
+	  </li>
+
+    
+
+	  <li class="post">
+	  	<h2><a href="/more-usage-lambda-proxy-integration">AWS Lambda Proxy Integration 활용</a></h2>
+      <time datetime="2017-03-07T00:00:00+09:00" class="by-line"> <i>07 Mar 2017</i> </time>
+	  	<p>지금까지 작성한 API 들은 성공이든 실패든 HTTP status 200 OK 를 던져주고 에러 코드나 메세지 등으로 구분하여 작성했습니다. 이번 서비스를 준비하면서 좀더 표준적인 API 설계를 해보고 싶어서 상태 코드로 에러를 분류하는 방법을 시도해 보았고, 고심 끝에 (…) 나온 방법들을 공유합니다. API-Gateway 단의 Integration response 를 커스텀하는 방법과, Lambda Proxy Integration...</p>
+	  </li>
+
+    
+
+	  <li class="post">
+	  	<h2><a href="/mongodb-auth-correctly">mongodb 올바르게 유저 생성하기</a></h2>
+      <time datetime="2017-03-07T00:00:00+09:00" class="by-line"> <i>07 Mar 2017</i> </time>
+	  	<p>mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다. &gt; use admin &gt; db.createUser({user: "ROOT_ID", pwd: "ROOT_PASSWO", roles:["root"]}) mongodb 서버를 재시작 한 후, 외부에서 --auth 플래그를 주고 root 계정으로 로그인합니다. sudo service mongod restart mongo &gt; mongo &lt;host:port&gt; -u "ROOT_ID" -p "ROOT_PASSWO" --authenticationDatabase "admin" root 계정으로 접속이 완료되면,...</p>
 	  </li>
 
     

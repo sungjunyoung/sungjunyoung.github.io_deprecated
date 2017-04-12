@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>SSH Key 등록으로 패스워드 없이 SSH 접속하기</title>
+  <meta name="description" content="SSH Key 등록으로 패스워드 없이 SSH 접속하기">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+
+  <!-- Plase Dont Go -->
+  <script type="text/javascript" src="/js/pleaseDontGo.js"></script>
+  <script type="text/javascript">
+    pleaseDontGo.init({
+      newTitle: 'Come back!',
+      newFavicon: '/img/pleaseDontGo.ico',
+      timeout: 1000
+    });
+  </script>
+
+
+  <!-- Google Analytics-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85815564-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/">BLOG</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="ABOUT">ABOUT</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+
+    <!-- Nav links -->
+	  
+<a href="https://github.com/sungjunyoung">GITHUB</a>
+
+
+	</div>
+
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">
+      <a href="/">
+        <h1>
+          <span>JUNYOUNG</span>BLOG
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="ABOUT">ABOUT</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+
+      <!-- Nav links -->
+	    
+<a href="https://github.com/sungjunyoung">GITHUB</a>
+
+
+    </span>
+  </div>
+</header>
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>SSH Key 등록으로 패스워드 없이 SSH 접속하기</h2>
+	<time datetime="2017-04-12T00:00:00+09:00" class="by-line">12 Apr 2017</time>
+	<div class="content">
+
+		<p>ssh 접속 시 계속 비밀번호를 입력하는게 여간 귀찮지 않을수가 없습니다. ssh key 등록을 통해 비밀번호를 입력하지 않고 접속하는 방법입니다.</p>
+
+<ol>
+  <li>
+    <p>SSH Key 생성하기</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> ssh-keygen -t rsa
+ Generating public/private rsa key pair.
+ Enter file <span class="k">in </span>which to save the key <span class="o">(</span>/Users/<span class="o">{</span>USER<span class="o">}</span>/.ssh/id_rsa<span class="o">)</span>:
+ Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>:
+ Enter same passphrase again:
+ Your identification has been saved <span class="k">in</span> /Users/<span class="o">{</span>USER<span class="o">}</span>/.ssh/id_rsa.
+ Your public key has been saved <span class="k">in</span> /Users/<span class="o">{</span>USER<span class="o">}</span>/.ssh/id_rsa.pub.
+ The key fingerprint is:
+ <span class="o">{</span>key fingerprint<span class="o">}</span>
+ The key<span class="se">\'</span>s randomart image is:
+ <span class="o">{</span>key<span class="se">\'</span>s randomart image<span class="o">}</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>SSH Key 확인하기</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> <span class="nb">cd</span> ~/.ssh
+ cat id_rsa.pub
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>서버에 키 등록하기</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> ssh-copy-id -i ~/.ssh/id_rsa <span class="o">{</span>USER<span class="o">}</span>@<span class="o">{</span>IP<span class="o">}</span>
+ /usr/bin/ssh-copy-id: INFO: Source of key<span class="o">(</span>s<span class="o">)</span> to be installed: <span class="s2">"/Users/{USER}/.ssh/id_rsa.pub"</span>
+ /usr/bin/ssh-copy-id: INFO: attempting to log <span class="k">in </span>with the new key<span class="o">(</span>s<span class="o">)</span>, to filter out any that are already installed
+ /usr/bin/ssh-copy-id: INFO: 1 key<span class="o">(</span>s<span class="o">)</span> remain to be installed -- <span class="k">if </span>you are prompted now it is to install the new keys
+ <span class="o">{</span>IP<span class="o">}</span><span class="se">\'</span>s password:
+
+ Number of key<span class="o">(</span>s<span class="o">)</span> added:        1
+
+ Now try logging into the machine, with:   <span class="s2">"ssh '{USER}@{IP}'"</span>
+ and check to make sure that only the key<span class="o">(</span>s<span class="o">)</span> you wanted were added.
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>다시 ssh 로 접속해 보면 비밀번호를 요구하지 않습니다.</p>
+  </li>
+</ol>
+
+
+	</div>
+	<div id="disqus_thread"></div>
+	<script>
+		/**
+		 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+		/*
+		var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+		(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document,
+				s = d.createElement('script');
+			s.src = 'https://blog-csficscaal.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</article>
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2017 based on monochrome</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>
