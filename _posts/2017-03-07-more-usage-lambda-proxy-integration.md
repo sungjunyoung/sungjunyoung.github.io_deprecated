@@ -127,7 +127,7 @@ context.fail(null);
 return;
 ```
 
-![api-gateway-headers](img/aapi-gateway-headers.png)
+![api-gateway-headers](img/api_gateway_headers.png)
 > HTTP Status code / Response Body, Headers 가 넘어온 API-Gateway 테스트 화면
 
 이렇게 400 Bad Request 와 함께 에러코드를 받아볼 수 있게됩니다.
