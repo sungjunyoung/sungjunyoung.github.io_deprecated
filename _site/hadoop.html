@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>AWS API Gateway CORS 설정</title>
-  <meta name="description" content="API Gateway + Swagger 사용 시 CORS 문제 해결">
+	<title>Hadoop 정리노트</title>
+  <meta name="description" content="Hadoop 공부하면서 계속 정리해놓는 노트입니다.">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/css/main.css">
@@ -144,60 +144,56 @@
 		<main>
 
 			<article id="post-page">
-	<h2>AWS API Gateway CORS 설정</h2>
-	<time datetime="2017-03-07T00:00:00+09:00" class="by-line">07 Mar 2017</time>
+	<h2>Hadoop 정리노트</h2>
+	<time datetime="2017-04-12T00:00:00+09:00" class="by-line">12 Apr 2017</time>
 	<div class="content">
 
-		<p><img src="/img/swagger_editor_cors_introduce.png" alt="swagger_editor_cors_introduce" /></p>
-
-<p>Swagger Editor 에서 Try this operation 을 클릭하면, 
-이런 안내문구가 나옵니다. CORS 는 Cross-origin 
-resource sharing 의 약자로, 다른 도메인의 서버에 URL 을
- 호출할 경우 보안상의 문제가 발생하게 되는데, 이 접근을 허용할 수
-  있게 해주는 메커니즘입니다.</p>
-
-<blockquote>
-  <p>Learn more 를 클릭하면 해당 이슈에 대한 자세한 설명을 볼 수 있습니다.</p>
-
-  <p>참고) <a href="https://github.com/swagger-api/swagger-editor/blob/master/docs/cors.md">https://github.com/swagger-api/swagger-editor/blob/master/docs/cors.md</a></p>
+		<blockquote>
+  <p>본 포스트는 Apache Hadoop 을 공부하면서 드문드문 계속 정리해 업데이트 되는 노트 입니다.</p>
 </blockquote>
 
-<p><img src="/img/cors-menu-of-api-gateway.png" alt="cors-menu-of-api-gateway" /></p>
+<h3 id="hadoop">Hadoop?</h3>
+<ul>
+  <li>대용량 데이터를 처리하는 분산 응용 프로그램을 작성하고 실행시키기 위한 오픈소스 프레임워크
+    <ul>
+      <li>접근</li>
+      <li>견고성</li>
+      <li>확장 가능성</li>
+      <li>간단성</li>
+    </ul>
+  </li>
+  <li>Map/Reduce 로 간단한 프로그램이의 확장</li>
+</ul>
 
-<p>API-Gateway 에서 해당 버튼을 누르고,
-‘Enable CORS and replace existing CORS headers’ 를 
-하게 되면 모든 것이 해결 될 줄 알았으나.. 여전히 swagger ui 
-에서 테스트를 시도하면 서버에서 응답이 없습니다.</p>
+<h3 id="hadoop-의-데몬들과-그-역할">Hadoop 의 데몬들과 그 역할</h3>
+<ul>
+  <li><strong>NameNode</strong> : HDFS의 master 역할을 하며, slave인 DataNode 데몬에게 I/O 작업을 지시한다. HDFS 의 일종의 기록원이다. 어떻게 파일이 블록 단위로 나누어져 있는지, 어느 노드가 해당 블록을 가지고 있는지와 분산 파일 시스템의 전반적인 상태를 알고 있다.</li>
+  <li><strong>DataNode</strong> : slave 머신에는 DataNode 데몬이 존재하는데, 로컬 파일 시스템에 위치한 파일에 HDFS 블록을 기록하거나 해당 파일을 읽는 등의 단순한 기능을 수행함.</li>
+  <li><strong>Secondary NameNode</strong> : 클러스터로 구성된 HDFS 의 상태를 모니터링하는 보조 성격을 가진 데몬. 각 클러스터는 하나의 SNN을 가지는데, 보통은 전용 머신에서 실행됨. 주기적으로 HDFS 메타데이터의 스냅샷을 찍어 데이터 손실과 시스템의 정지 시간을 최소화하는데 사용됨</li>
+  <li><strong>JobTracker</strong> : 클러스터 노드에서 실행되는 사용자 어플리케이션들을 관리함. 하둡 클러스터에는 하나의 JobTracker 데몬만 존재, 보통 master 노드에서 실행.</li>
+  <li><strong>TaskTracker</strong> : 각 slave 노드에 할당된 작업의 실행을 담당함 JobTracker 가 할당한 개별 작업을 실행한다. Slave 노드에는 TaskTracker 하나만 존재하며, 이 하나가 여러개의 JVM을 생성해서 다수의 map/reduce 작업을 병렬 처리할수 있다. 계속적으로 JobTracker 와 통신하며, 통신 실패시 JobTracker는 TaskTracker 에 문제가 생긴 것으로 간주하고 해당 작업을 클러스터 내에 위치한 다른 노드에 할당한다.</li>
+</ul>
 
-<p>요리 저리 검색한 결과,</p>
+<h3 id="전형적인-hadoop-클러스터의-구조">전형적인 Hadoop 클러스터의 구조</h3>
+<p><img src="/img/structure_of_hadoop_cluster.JPG" alt="structure_of_hadoop_cluster" /></p>
 
-<p><img src="/img/enable_cors_menu.png" alt="enable_cors_menu" /></p>
+<h3 id="hadoop-클러스터를-위한-ssh-의-설정">Hadoop 클러스터를 위한 SSH 의 설정</h3>
+<ul>
+  <li>master 노드는 클러스터에 위치한 다른 모든 노드들에 접근할수 있어야 하는데, 이런 접근을 위해 SSH 를 사용한다.</li>
+  <li>하둡에서는 모든 노드가 동일한 사용자명을 가진다.</li>
+</ul>
 
-<p>위의 화면에서 Access-Control-Allow-Headers 입력란의 default 
-문자열 뒤에 X-Requested-With 를 추가해 주고,</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token, X-Requested-With'
-</code></pre>
-</div>
-
-<blockquote>
-  <p>X-Requested-With 는 해당 요청이 Ajax 라는 것을 의미하며,
- 서버에서는 미리 준비를 하게 됩니다.</p>
-
-  <p>참고) <a href="https://remysharp.com/2011/04/21/getting-cors-working">https://remysharp.com/2011/04/21/getting-cors-working</a></p>
-</blockquote>
-
-<p>방금 CORS 를 허용한 리소스 내의 메서드를 클릭하여 Method Response 로 들어갑니다.</p>
-
-<p><img src="/img/method_response.png" alt="method_response" /></p>
-
-<p>그리고 Response Headers for ~ 에서 Access-Control-Allow-Headers 와 X-Requested-With 헤더를 추가해 줍니다.</p>
-
-<p><img src="/img/deploy_api.png" alt="deploy_api" /></p>
-
-<p>해당 API 를 Deploy 하여 스테이지로 올린 후, Swagger-ui 혹은 Swagger-editor 에서 테스트 해보면, 정상적으로 작동하는 것을 확인할 수 있습니다.</p>
-
-<p><img src="/img/normal_response_of_api.png" alt="normal_response_of_api" /></p>
+<h3 id="hadoop-파일-다루기">Hadoop 파일 다루기</h3>
+<ul>
+  <li>기본적인 파일 명령어
+    <ul>
+      <li><code class="highlighter-rouge">hadoop fs -cmd &lt;args&gt;</code></li>
+    </ul>
+  </li>
+  <li>파일 및 디렉토리 추가 : <code class="highlighter-rouge">hadoop fs -mkdir &lt;path&gt;</code></li>
+  <li>디렉토리 확인 : <code class="highlighter-rouge">hadoop fs -ls -R &lt;path&gt;</code></li>
+  <li>로컬 파일 hfs 로 복사 : <code class="highlighter-rouge">hadoop fs -put example.txt /user/junyoung</code></li>
+</ul>
 
 
 	</div>
