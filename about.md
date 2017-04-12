@@ -4,7 +4,7 @@ title: ABOUT
 description: About Junyoung
 ---
 
-![profile](/img/profileImage.png)
+![profile](https://raw.githubusercontent.com/sungjunyoung/sungjunyoung.github.io/master/img/profileImage.png)
 
 ## Name
 \_<br>
