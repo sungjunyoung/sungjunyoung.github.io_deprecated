@@ -4,7 +4,7 @@
  <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-04-12T15:52:04+09:00</updated>
+ <updated>2017-04-12T16:09:52+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
@@ -49,6 +49,16 @@
    <id>http://localhost:4000/mongodb-auth-correctly</id>
    <updated>2017-03-07T00:00:00+09:00</updated>
    <content type="html">&lt;p&gt;mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;use admin &lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;db.createUser&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;user: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_ID&quot;&lt;/span&gt;, &lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_PASSWO&quot;&lt;/span&gt;, roles:[&lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]})&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;mongodb 서버를 재시작 한 후, 외부에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;--auth&lt;/code&gt; 플래그를 주고 root 계정으로 로그인합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>AWS API Gateway CORS 설정</title>
+   <link href="http://localhost:4000/config-cors-aws-api-gateway"/>
+   <id>http://localhost:4000/config-cors-aws-api-gateway</id>
+   <updated>2017-03-07T00:00:00+09:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/img/swagger_editor_cors_introduce.png&quot; alt=&quot;swagger_editor_cors_introduce&quot; /&gt;&lt;/p&gt; &lt;p&gt;Swagger Editor 에서 Try this operation 을 클릭하면, 이런 안내문구가 나옵니다. CORS 는 Cross-origin resource sharing 의 약자로, 다른 도메인의 서버에 URL 을 호출할 경우 보안상의 문제가 발생하게 되는데, 이 접근을 허용할 수 있게 해주는 메커니즘입니다.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Learn more 를 클릭하면 해당 이슈에 대한 자세한 설명을...</content>
  </entry>
 
  
