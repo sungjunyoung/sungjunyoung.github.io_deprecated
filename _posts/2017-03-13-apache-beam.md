@@ -1,7 +1,7 @@
 ---
-title: Apache Beam
+title: Apache Beam 소개
 description: 'Apache Beam 소개'
-header: Apache Beam
+header: Apache Beam 소개
 ---
 
 ![Beam Logo](img/beam_logo_s.png)
