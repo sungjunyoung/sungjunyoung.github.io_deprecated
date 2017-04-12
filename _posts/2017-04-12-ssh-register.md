@@ -1,7 +1,7 @@
 ---
 title: SSH Key 등록으로 패스워드 없이 SSH 접속하기
 description: 'SSH Key 등록으로 패스워드 없이 SSH 접속하기'
-header: SSH Key Register
+header: SSH Key 등록으로 패스워드 없이 SSH 접속하기
 ---
 
  ssh 접속 시 계속 비밀번호를 입력하는게 여간 귀찮지 않을수가 없습니다. ssh key 등록을 통해 비밀번호를 입력하지 않고 접속하는 방법입니다.
