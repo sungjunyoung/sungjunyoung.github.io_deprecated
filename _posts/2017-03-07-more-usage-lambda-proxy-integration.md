@@ -82,7 +82,7 @@ var body = JSON.parse(event.body);
 이제 본래의 목적이었던 HTTP status code 를 람다 함수 내에서 리턴할 수 있게 됩니다. callback 으로 다음과 같은 오브젝트를 리턴하면, HTTP status code, 헤더와 함께 에러 메시지 등을 body 에 실어 보낼 수 있습니다.
 
 ```js
-{
+returnObject = {
     statusCode: 400,
     body: JSON.stringify({ <OBJECT> }),
     headers: {'Content-Type': 'application/json'}

@@ -159,7 +159,7 @@
 		<p>mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다.</p>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">&gt; </span>use admin
-<span class="gp">&gt; </span>db.createUser<span class="o">({</span>user: <span class="s2">"ROOT_ID"</span>, <span class="nb">pwd</span>: <span class="s2">"ROOT_PASSWO"</span>, roles:[<span class="s2">"root"</span><span class="o">]})</span>
+<span class="gp">&gt; </span>db.createUser<span class="o">({</span>user: <span class="s2">"ROOT_ID"</span>, <span class="nb">pwd</span>: <span class="s2">"ROOT_PASSWO"</span>, roles: <span class="o">[</span><span class="s2">"root"</span><span class="o">]})</span>
 </code></pre>
 </div>
 
@@ -179,7 +179,7 @@ mongo
 </blockquote>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">&gt; </span>use DATABASE
-<span class="gp">&gt; </span>db.createUser<span class="o">({</span>user: <span class="s2">"DB_USER_ID"</span>, <span class="nb">pwd</span>: <span class="s2">"DB_USER_PASSWORD"</span>, roles:[<span class="s2">"dbOwner"</span><span class="o">]})</span>
+<span class="gp">&gt; </span>db.createUser<span class="o">({</span>user: <span class="s2">"DB_USER_ID"</span>, <span class="nb">pwd</span>: <span class="s2">"DB_USER_PASSWORD"</span>, roles: <span class="o">[</span><span class="s2">"dbOwner"</span><span class="o">]})</span>
 </code></pre>
 </div>
 

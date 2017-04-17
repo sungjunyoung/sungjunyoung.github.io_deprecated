@@ -8,7 +8,7 @@
 	<meta name="generator" content="Jekyll">
 
 	<title>17-1 학기 데이터베이스 중간고사 정리</title>
-  <meta name="description" content="17-1 학기 데이터베이스 중간고사 나올것만 정리하기">
+  <meta name="description" content="이것저것 블로그">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/css/main.css">
@@ -164,14 +164,14 @@
 <ul>
   <li>데이터 베이스 사용자
     <ul>
-      <li><img src="/img/database-mid-term/5E7E6106-DD19-479F-99CC-23D7648AD337.png" alt="database-mid-term" /></li>
+      <li><img src="/img/database-mid-term/F7D941AE-A754-4BC9-856E-9FC47D3EB6BC.png" alt="database-mid-term" /></li>
     </ul>
   </li>
   <li>ANSI/SPARC 아키텍쳐와 데이터 독립성
     <ul>
       <li>ANSI/SPARC 아키텍쳐
         <ul>
-          <li><img src="/img/database-mid-term/5F0EA880-25D4-439F-8FD6-647F458764E9.png" alt="database-mid-term" /></li>
+          <li><img src="/img/database-mid-term/5E7E6106-DD19-479F-99CC-23D7648AD337.png" alt="database-mid-term" /></li>
           <li>각 단계별 설명
             <ul>
               <li>외부 단계
@@ -229,39 +229,51 @@
       </li>
       <li>데이터 베이스 시스템 아키텍쳐
         <ul>
-          <li><img src="/img/database-mid-term/8E493047-C964-448D-A63B-FB113E884366.png" alt="database-mid-term" />
-      - 데이터 정의어 컴파일러 (DDL Compilier) 모듈
-          - 데이터 정의어에 따라 데이터베이스를 정의하고, 해당 명세를 시스템 카탈로그에 저장한다.
-      - 질의 처리기
-          - 데이터 조작어를 수행하는 최적의 방법을 찾음
-          - 질의를 기계어로 번역
-      - 런타임 데이터베이스 관리기 모듈
-          - 디스크에 저장된 데이터베이스에 접근
-      - 트랜젝션 관리
-          - 동시성 제어 모듈
-          - 회복 모듈
+          <li><img src="/img/database-mid-term/A7F76782-3ABD-4887-830A-2E9607294935.png" alt="database-mid-term" />
             <ul>
-              <li>클라이언트 - 서버 데이터베이스 시스템
+              <li>데이터 정의어 컴파일러 (DDL Compilier) 모듈
                 <ul>
-                  <li>데이터베이스가 하나의 데이터베이스 서버에 저장</li>
-                  <li>데이터베이스의 기능이 서버와 클라이언트에 분산됨</li>
-                  <li>서버는 데이터베이스를 저장하고 DBMS 를 운영하면서 여러 클라이언트에서 온 질의를 최적화, 권한검사, 동시성제어, 회복 기능을 수행하고, 데이터베이스의 무결성을 유지하며 데이터베이스 접근을 관리</li>
-                  <li>클라이언트는 사용자 인터페이스를 관리하고 응용들을 수행</li>
-                  <li><img src="/img/database-mid-term/63FDC1EA-E277-4B2D-A0E5-A210F564AE1A.png" alt="database-mid-term" /></li>
-                  <li>2층 모델 : 클라이언트와 데이터베이스 서버가 직접 연결</li>
-                  <li>3층 모델 : 클라이언트와 데이터베이스 서버 사이에 응용 서버 (API 서버) 가 추가됨</li>
-                  <li>장점
-                    <ul>
-                      <li>데이터베이스를 보다 넓은 지역에서 접근 가능</li>
-                      <li>하드웨어 비용 절감</li>
-                      <li>다양한 컴퓨터 시스템을 사용가능</li>
-                    </ul>
-                  </li>
-                  <li>단점
-                    <ul>
-                      <li>보안 취약 가능성</li>
-                    </ul>
-                  </li>
+                  <li>데이터 정의어에 따라 데이터베이스를 정의하고, 해당 명세를 시스템 카탈로그에 저장한다.</li>
+                </ul>
+              </li>
+              <li>질의 처리기
+                <ul>
+                  <li>데이터 조작어를 수행하는 최적의 방법을 찾음</li>
+                  <li>질의를 기계어로 번역</li>
+                </ul>
+              </li>
+              <li>런타임 데이터베이스 관리기 모듈
+                <ul>
+                  <li>디스크에 저장된 데이터베이스에 접근</li>
+                </ul>
+              </li>
+              <li>트랜젝션 관리
+                <ul>
+                  <li>동시성 제어 모듈</li>
+                  <li>회복 모듈</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>클라이언트 - 서버 데이터베이스 시스템
+            <ul>
+              <li>데이터베이스가 하나의 데이터베이스 서버에 저장</li>
+              <li>데이터베이스의 기능이 서버와 클라이언트에 분산됨</li>
+              <li>서버는 데이터베이스를 저장하고 DBMS 를 운영하면서 여러 클라이언트에서 온 질의를 최적화, 권한검사, 동시성제어, 회복 기능을 수행하고, 데이터베이스의 무결성을 유지하며 데이터베이스 접근을 관리</li>
+              <li>클라이언트는 사용자 인터페이스를 관리하고 응용들을 수행</li>
+              <li><img src="/img/database-mid-term/8E493047-C964-448D-A63B-FB113E884366.png" alt="database-mid-term" /></li>
+              <li>2층 모델 : 클라이언트와 데이터베이스 서버가 직접 연결</li>
+              <li>3층 모델 : 클라이언트와 데이터베이스 서버 사이에 응용 서버 (API 서버) 가 추가됨</li>
+              <li>장점
+                <ul>
+                  <li>데이터베이스를 보다 넓은 지역에서 접근 가능</li>
+                  <li>하드웨어 비용 절감</li>
+                  <li>다양한 컴퓨터 시스템을 사용가능</li>
+                </ul>
+              </li>
+              <li>단점
+                <ul>
+                  <li>보안 취약 가능성</li>
                 </ul>
               </li>
             </ul>
@@ -304,14 +316,14 @@
   </li>
   <li>관계 데이터 모델에서의 내포와 외포
     <ul>
-      <li>내포 : 릴레이션 스키마 (relation schema)
+      <li>내포 : 릴레이션 스키마 (relatiON schema)
         <ul>
           <li>릴레이션의 이름과 릴레이션의 애트리뷰트들의 집합</li>
           <li>표기법 : 릴레이션이름(<u>애트리뷰트1</u> , 애트리뷰트2, …애트리뷰트N)</li>
           <li>기본 키 애트리뷰트에는 밑줄 표시</li>
         </ul>
       </li>
-      <li>외연 : 릴레이션 인스턴스 (relation instance)
+      <li>외연 : 릴레이션 인스턴스 (relatiON instance)
         <ul>
           <li>릴레이션에 어느 시점에 들어있는 튜플의 집합</li>
           <li>시간의 흐름에 따라 계속 변함</li>
@@ -322,7 +334,7 @@
   </li>
   <li>릴레이션의 키
     <ul>
-      <li>종류 - 수퍼 키(superkey), 후보 키(candidate key), 기본 키(primary key), 대체 키(alternate key), 외래 키(foreign key)</li>
+      <li>종류 - 수퍼 키(superkey), 후보 키(cANDidate key), 기본 키(primary key), 대체 키(alternate key), 외래 키(foreign key)</li>
       <li>수퍼 키
         <ul>
           <li>튜플을 고유하게 식별하는데 꼭 필요하지만은 않은 애트리뷰트</li>
@@ -391,7 +403,7 @@
 <ul>
   <li>데이터베이스 설계의 주요 단계
     <ul>
-      <li><img src="/img/database-mid-term/254F39CB-94EF-4575-85DF-F05E66044B81.png" alt="database-mid-term" /></li>
+      <li><img src="/img/database-mid-term/D652C9BB-7A08-4A4A-9B75-DC096ED7CF31.png" alt="database-mid-term" /></li>
       <li>개념적 설계
         <ul>
           <li>모든 물리적인 사항과 독립적으로, 조직체의 정보의 모델의 구축</li>
@@ -440,7 +452,7 @@
               <li>하나의 부서는 한명 이상의 사원을 갖는다.</li>
             </ul>
           </li>
-          <li><img src="/img/database-mid-term/D652C9BB-7A08-4A4A-9B75-DC096ED7CF31.png" alt="database-mid-term" />
+          <li><img src="/img/database-mid-term/5F0EA880-25D4-439F-8FD6-647F458764E9.png" alt="database-mid-term" />
             <ul>
               <li>한명의 사원은 부양가족을 0 명 이상의 부양가족을 갖는다.</li>
               <li>부양가족은 1명의 사원을 갖는다.</li>
@@ -448,7 +460,7 @@
           </li>
           <li>설명을 보고 ER 스키마 다이어그램을 그릴 수 있어야 함 / ER 스키마 다이어그램을 보고 해석할 수 있어야 함
             <ul>
-              <li><img src="/img/database-mid-term/F7D941AE-A754-4BC9-856E-9FC47D3EB6BC.png" alt="database-mid-term" /></li>
+              <li><img src="/img/database-mid-term/254F39CB-94EF-4575-85DF-F05E66044B81.png" alt="database-mid-term" /></li>
             </ul>
           </li>
         </ul>
@@ -469,7 +481,7 @@
       <li>LENGTH(string) : 문자열 길이 반환</li>
       <li>INSTR(string, string) : 0 에 대해 1의 위치 반환</li>
       <li>L/R PAD(string, int, string) : 1 만큼 문자열 길이 늘리고 2로 빈공간 채워서 반환, 좌우정렬</li>
-      <li>TRIM(string from string) : 1의 앞뒤에서 0을 제외하고 반환</li>
+      <li>TRIM(string FROM string) : 1의 앞뒤에서 0을 제외하고 반환</li>
       <li>REPLACE(string, string, string) : 0에서 1을 찾고 있으면 2로 바꿔서 반환</li>
     </ul>
   </li>
@@ -496,8 +508,8 @@
   </li>
   <li>일반 함수
     <ul>
-      <li>NVL(expression1, expression2) : ex1 값이 NULL 인 경우 ex2 값 반환하며 그렇지 않으면 ex1 값을 반환</li>
-      <li>NVL2(expression1, expression2, expression3)  : ex1 이 NULL 인 경우 ex3 반환, 아닌경우 ex2 반환</li>
+      <li>NVL(expressiON1, expressiON2) : ex1 값이 NULL 인 경우 ex2 값 반환하며 그렇지 않으면 ex1 값을 반환</li>
+      <li>NVL2(expressiON1, expressiON2, expressiON3)  : ex1 이 NULL 인 경우 ex3 반환, 아닌경우 ex2 반환</li>
     </ul>
   </li>
 </ul>
@@ -506,126 +518,157 @@
 
 <ol>
   <li>DEPARTMENTS 테이블에서 전체를 본다.
-    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">DEPARTMENTS</span> 
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">DEPARTMENTS</span>
 </code></pre>
     </div>
   </li>
-  <li>Employees 테이블에서 EMPLOYEE_ID 와 성과 이름을 합친것, JOB_ID 와 HIRE_DATE 에 “STARTDATE” 라는 레이블을 붙여서 본다.
-    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">EMPLOYEE_ID</span><span class="p">,</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span><span class="p">,</span> <span class="n">JOB_ID</span><span class="p">,</span> <span class="n">HIRE_DATE</span> <span class="k">AS</span> <span class="nv">"STARTDATE"</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+  <li>EMPLOYEES 테이블에서 EMPLOYEE_ID 와 성과 이름을 합친것, JOB_ID 와 HIRE_DATE 에 “STARTDATE” 라는 레이블을 붙여서 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">EMPLOYEE_ID</span><span class="p">,</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span><span class="p">,</span> <span class="n">JOB_ID</span><span class="p">,</span> <span class="n">HIRE_DATE</span> <span class="k">AS</span> <span class="nv">"STARTDATE"</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code> SELECT FIRST_NAME || ' ' || LAST_NAME || ', ' || JOB_ID AS "Employee and Title" FROM employees;
+  <li>EMPLOYEES 테이블에서 성과 이름, JOB_ID 를 합쳐서 “Employee AND Title” 로 레이블을 붙여 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="o">||</span> <span class="s1">', '</span> <span class="o">||</span> <span class="n">JOB_ID</span> <span class="k">AS</span> <span class="nv">"Employee AND Title"</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code> SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY FROM employees WHERE SALARY &gt; 12000;
+  <li>EMPLOYEES 테이블에서 SALARY 가 12000 이상인 사원의 성과 이름을 합치고 NAME 이라고 레이블 붙인 것과 SALARY 를 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="k">AS</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">SALARY</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+ <span class="k">WHERE</span> <span class="n">SALARY</span> <span class="o">&gt;</span> <span class="mi">12000</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code> SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE EMPLOYEE_ID = 176;
+  <li>EMPLOYEES 테이블에서 EMPLOYEE_ID 가 176인 사원의 성과 이름을 합쳐 NAME 으로 레이블을 붙인 것과, DEPARTMENT_ID 를 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="k">AS</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">DEPARTMENT_ID</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+ <span class="k">WHERE</span> <span class="n">EMPLOYEE_ID</span> <span class="o">=</span> <span class="mi">176</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code> SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY FROM employees WHERE SALARY &lt; 5000 OR SALARY &gt; 12000;
+  <li>EMPLOYEES 테이블에서 SALARY 가 5000미만이거나 12000 초과인 사원의 성과 이름을 합쳐 NAME 으로 레이블 붙인것과 SALARY 를 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="k">AS</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">SALARY</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+ <span class="k">WHERE</span> <span class="n">SALARY</span> <span class="o">&lt;</span> <span class="mi">5000</span> <span class="k">OR</span> <span class="n">SALARY</span> <span class="o">&gt;</span> <span class="mi">12000</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code> SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE DEPARTMENT_ID = 20 OR DEPARTMENT_ID = 50 ORDER BY FIRST_NAME;
+  <li>EMPLOYEES 테이블에서 DEPARTMENT_ID 가 20 혹은 50인 사원의 성과 이름을 합쳐 NAME 으로 레이블을 붙인 것과 DEPARTMENT_ID 를 FIRST_NAME 으로 정렬하여 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="k">AS</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">DEPARTMENT_ID</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+ <span class="k">WHERE</span> <span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="mi">20</span> <span class="k">OR</span> <span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="mi">50</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">FIRST_NAME</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code> SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE MANAGER_ID IS NULL
+  <li>EMPLOYEES 테이블에서 MANAGER_ID 가 NULL 인 사원을 성과 이름을 합쳐 NAME 으로 레이블을 붙인 것과 DEPARTMENT_ID 를 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="k">AS</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">DEPARTMENT_ID</span>
+ <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+ <span class="k">WHERE</span> <span class="n">MANAGER_ID</span> <span class="k">IS</span> <span class="k">NULL</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY, COMMISSION_PCT FROM employees WHERE COMMISSION_PCT IS NOT NULL ORDER BY SALARY DESC, COMMISSION_PCT DESC;
+  <li>EMPLOYEES 테이블에서 COMMISSION_PCT 가 NULL 이 아닌 사원의 풀네임(NAME 레이블) 과 SALARY, COMMISSION_PCT를 SALARY에 내림차순, COMMISSION_PCT에 오름차순으로 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="o">||</span> <span class="s1">' '</span> <span class="o">||</span> <span class="n">LAST_NAME</span> <span class="k">AS</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">SALARY</span><span class="p">,</span> <span class="n">COMMISSION_PCT</span>
+<span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+<span class="k">WHERE</span> <span class="n">COMMISSION_PCT</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">SALARY</span> <span class="k">DESC</span><span class="p">,</span> <span class="n">COMMISSION_PCT</span> <span class="k">DESC</span><span class="p">;</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>SELECT sysdate FROM DUAL
+  <li>현재시각을 출력한다. (DUAL 은 계산 결과를 위해 임의의 테이블을 만듬)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">sysdate</span> <span class="k">FROM</span> <span class="n">DUAL</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>SELECT INITCAP(last_name) last_name, LENGTH(last_name) length_of_last_name FROM employees WHERE SUBSTR(last_name, 0,1) IN ('J','A','M')
+  <li>EMPLOYEES 테이블에서 LAST_NAME 의 첫글자가 ‘J’, ‘A’, 혹은 ‘M’인 사원의 이름을 첫글자를 대문자로 나머지는 소문자로 변경것과, 이름의 길이(length_of_LAST_NAME 레이블)을 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">INITCAP</span><span class="p">(</span><span class="n">LAST_NAME</span><span class="p">)</span> <span class="n">LAST_NAME</span><span class="p">,</span> <span class="k">LENGTH</span><span class="p">(</span><span class="n">LAST_NAME</span><span class="p">)</span> <span class="n">length_of_LAST_NAME</span>
+<span class="k">FROM</span> <span class="n">EMPLOYEES</span>
+<span class="k">WHERE</span> <span class="n">SUBSTR</span><span class="p">(</span><span class="n">LAST_NAME</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">'J'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'M'</span><span class="p">)</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>SELECT employee_id, first_name, job_id, DECODE(job_id, 'AD_PRES', 'A', 'ST_MAN', 'B', 'IT_PROG', 'C', 'SA_REP', 'D', 'ST_CLERK','E','O') job_grade FROM employees
+  <li>EMPLOYEES 테이블에서 EMPLOYEE_ID, FIRST_NAME, JOB_ID 가 ‘AD_PRES’ 이면 ‘A’로, ‘ST_MAN’이면 ‘B’로 … 변경해 JOB_GRADE 레이블을 붙인 것 을 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">EMPLOYEE_ID</span><span class="p">,</span> <span class="n">FIRST_NAME</span><span class="p">,</span> <span class="n">JOB_ID</span><span class="p">,</span> <span class="n">DECODE</span><span class="p">(</span><span class="n">JOB_ID</span><span class="p">,</span> <span class="s1">'AD_PRES'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'ST_MAN'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'IT_PROG'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'SA_REP'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'ST_CLERK'</span><span class="p">,</span><span class="s1">'E'</span><span class="p">,</span><span class="s1">'O'</span><span class="p">)</span> <span class="n">JOB_GRADE</span>
+<span class="k">FROM</span> <span class="n">EMPLOYEES</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>SELECT employee_id, first_name, job_id, CASE job_id WHEN 'AD_PRES' THEN 'A' WHEN 'ST_MAN' THEN 'B' WHEN 'IT_PROG' THEN 'C' WHEN 'SA_REP' THEN 'D' WHEN 'ST_CLERK' THEN 'E' ELSE 'O' END AS job_grade FROM employees
+  <li>위와 동일하지만, CASE / END 문 사용
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">EMPLOYEE_ID</span><span class="p">,</span> <span class="n">FIRST_NAME</span><span class="p">,</span> <span class="n">JOB_ID</span><span class="p">,</span>
+<span class="k">CASE</span> <span class="n">JOB_ID</span>
+    <span class="k">WHEN</span> <span class="s1">'AD_PRES'</span> <span class="k">THEN</span> <span class="s1">'A'</span>
+    <span class="k">WHEN</span> <span class="s1">'ST_MAN'</span> <span class="k">THEN</span> <span class="s1">'B'</span>
+    <span class="k">WHEN</span> <span class="s1">'IT_PROG'</span> <span class="k">THEN</span> <span class="s1">'C'</span>
+    <span class="k">WHEN</span> <span class="s1">'SA_REP'</span> <span class="k">THEN</span> <span class="s1">'D'</span>
+    <span class="k">WHEN</span> <span class="s1">'ST_CLERK'</span> <span class="k">THEN</span> <span class="s1">'E'</span>
+    <span class="k">ELSE</span> <span class="s1">'O'</span>
+<span class="k">END</span> <span class="k">AS</span> <span class="n">JOB_GRADE</span>
+<span class="k">FROM</span> <span class="n">EMPLOYEES</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select e.last_name,e.department_id , d.department_name from employees e left outer join departments d on (e.department_id = d.department_id)
+  <li>EMPLOYEES 테이블을 e 라 할때, e 와 d 로 라벨링한 DEPARTMENTS 를 e의 DEPARTMENT_ID 와 d의 DEPARTMENT_ID 가 같은 것을 LEFT OUTER JOIN 해서 좌측(e)에 기준을 맞추고 우측(d)는 결과가 없더라도 출력해서 본다.
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
+<span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="n">e</span>
+<span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">DEPARTMENTS</span> <span class="n">d</span> <span class="k">ON</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select e.last_name, d.department_name, l.location_id, l.city from employees e
-join departments d on (e.department_id = d.department_id)
-join locations l on (d.location_id = l.location_id)
-where e.commission_pct is not null
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span> <span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="p">,</span> <span class="n">l</span><span class="p">.</span><span class="n">CITY</span>
+<span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="n">e</span>
+<span class="k">JOIN</span> <span class="n">DEPARTMENTS</span> <span class="n">d</span> <span class="k">ON</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
+<span class="k">JOIN</span> <span class="n">LOCATIONS</span> <span class="n">l</span> <span class="k">ON</span> <span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">LOCATION_ID</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="p">)</span>
+<span class="k">WHERE</span> <span class="n">e</span><span class="p">.</span><span class="n">COMMISSION_PCT</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select e.last_name, d.department_name from employees e
-join departments d on (e.department_id = d.department_id and e.last_name like '%a%')
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="n">e</span>
+<span class="k">JOIN</span> <span class="n">DEPARTMENTS</span> <span class="n">d</span> <span class="k">ON</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="k">AND</span> <span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span> <span class="k">LIKE</span> <span class="s1">'%a%'</span><span class="p">)</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select e.last_name, e.job_id, d.department_id, d.department_name from employees e
-join departments d on (e.department_id = d.department_id)
-join locations l on (d.location_id = l.location_id and l.city = 'Toronto')
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">JOB_ID</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="n">e</span>
+<span class="k">JOIN</span> <span class="n">DEPARTMENTS</span> <span class="n">d</span> <span class="k">ON</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
+<span class="k">JOIN</span> <span class="n">LOCATIONS</span> <span class="n">l</span> <span class="k">ON</span> <span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">LOCATION_ID</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span> <span class="k">AND</span> <span class="n">l</span><span class="p">.</span><span class="n">CITY</span> <span class="o">=</span> <span class="s1">'Toronto'</span><span class="p">)</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select e.first_name, d.department_name, l.location_id, l.city  from employees e
-join departments d on (e.department_id = d.department_id)
-join locations l on (l.location_id = d.location_id)
-where l.city = 'Oxford' and e.commission_pct is not null
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">e</span><span class="p">.</span><span class="n">FIRST_NAME</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span> <span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="p">,</span> <span class="n">l</span><span class="p">.</span><span class="n">CITY</span>  <span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="n">e</span>
+<span class="k">JOIN</span> <span class="n">DEPARTMENTS</span> <span class="n">d</span> <span class="k">ON</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
+<span class="k">JOIN</span> <span class="n">LOCATIONS</span> <span class="n">l</span> <span class="k">ON</span> <span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="p">)</span>
+<span class="k">WHERE</span> <span class="n">l</span><span class="p">.</span><span class="n">CITY</span> <span class="o">=</span> <span class="s1">'Oxford'</span> <span class="k">AND</span> <span class="n">e</span><span class="p">.</span><span class="n">COMMISSION_PCT</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select employee_id, first_name, salary, salary * 1.15 as New_Salary from employees
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">EMPLOYEE_ID</span><span class="p">,</span> <span class="n">FIRST_NAME</span><span class="p">,</span> <span class="n">SALARY</span><span class="p">,</span> <span class="n">SALARY</span> <span class="o">*</span> <span class="mi">1</span><span class="p">.</span><span class="mi">15</span> <span class="k">as</span> <span class="n">New_SALARY</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select last_name, NVL(TO_CHAR(commission_pct),'No Commission') COMM from employees
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">LAST_NAME</span><span class="p">,</span> <span class="n">NVL</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="n">COMMISSION_PCT</span><span class="p">),</span><span class="s1">'No Commission'</span><span class="p">)</span> <span class="n">COMM</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select first_name, job_id, salary from employees where job_id in ('SA_REP','ST_CLERK') and salary not in (2500, 3500, 7000)
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">FIRST_NAME</span><span class="p">,</span> <span class="n">JOB_ID</span><span class="p">,</span> <span class="n">SALARY</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="k">WHERE</span> <span class="n">JOB_ID</span> <span class="k">in</span> <span class="p">(</span><span class="s1">'SA_REP'</span><span class="p">,</span><span class="s1">'ST_CLERK'</span><span class="p">)</span> <span class="k">AND</span> <span class="n">SALARY</span> <span class="k">not</span> <span class="k">in</span> <span class="p">(</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">3500</span><span class="p">,</span> <span class="mi">7000</span><span class="p">)</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select first_name Employee, salary Monthly_Salary from employees where salary &gt;= 5000 and salary &lt;= 12000 and department_id in (20, 50)
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="n">Employee</span><span class="p">,</span> <span class="n">SALARY</span> <span class="n">MONthly_SALARY</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="k">WHERE</span> <span class="n">SALARY</span> <span class="o">&gt;=</span> <span class="mi">5000</span> <span class="k">AND</span> <span class="n">SALARY</span> <span class="o">&lt;=</span> <span class="mi">12000</span> <span class="k">AND</span> <span class="n">DEPARTMENT_ID</span> <span class="k">in</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </code></pre>
     </div>
   </li>
-  <li>추가예정
-    <div class="highlighter-rouge"><pre class="highlight"><code>select first_name from employees where substr(first_name,0, 3) like '%a'
+  <li>추론해보기 (귀ㅊ..ㄴ…)
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">FIRST_NAME</span> <span class="k">FROM</span> <span class="n">EMPLOYEES</span> <span class="k">WHERE</span> <span class="n">SUBSTR</span><span class="p">(</span><span class="n">FIRST_NAME</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">LIKE</span> <span class="s1">'%a'</span>
 </code></pre>
     </div>
   </li>

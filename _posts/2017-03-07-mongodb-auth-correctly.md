@@ -8,7 +8,7 @@ mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 �
 
 ```sh
 > use admin
-> db.createUser({user: "ROOT_ID", pwd: "ROOT_PASSWO", roles:["root"]})
+> db.createUser({user: "ROOT_ID", pwd: "ROOT_PASSWO", roles: ["root"]})
 ```
 
 mongodb 서버를 재시작 한 후, 외부에서 `--auth` 플래그를 주고 root 계정으로 로그인합니다.
@@ -26,7 +26,7 @@ root 계정으로 접속이 완료되면, 사용할 데이터베이스를 만든
 
 ```sh
 > use DATABASE
-> db.createUser({user: "DB_USER_ID", pwd: "DB_USER_PASSWORD", roles:["dbOwner"]})
+> db.createUser({user: "DB_USER_ID", pwd: "DB_USER_PASSWORD", roles: ["dbOwner"]})
 ```
 
 성공 메시지가 나오면, 해당 유저로 데이터베이스에 접속합니다.

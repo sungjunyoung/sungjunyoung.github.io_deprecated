@@ -199,7 +199,7 @@
 	  <li class="post">
 	  	<h2><a href="/mongodb-auth-correctly">mongodb 올바르게 유저 생성하기</a></h2>
       <time datetime="2017-03-07T00:00:00+09:00" class="by-line"> <i>07 Mar 2017</i> </time>
-	  	<p>mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다. &gt; use admin &gt; db.createUser({user: "ROOT_ID", pwd: "ROOT_PASSWO", roles:["root"]}) mongodb 서버를 재시작 한 후, 외부에서 --auth 플래그를 주고 root 계정으로 로그인합니다. sudo service mongod restart mongo &gt; mongo &lt;host:port&gt; -u "ROOT_ID" -p "ROOT_PASSWO" --authenticationDatabase "admin" root 계정으로 접속이 완료되면,...</p>
+	  	<p>mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다. &gt; use admin &gt; db.createUser({user: "ROOT_ID", pwd: "ROOT_PASSWO", roles: ["root"]}) mongodb 서버를 재시작 한 후, 외부에서 --auth 플래그를 주고 root 계정으로 로그인합니다. sudo service mongod restart mongo &gt; mongo &lt;host:port&gt; -u "ROOT_ID" -p "ROOT_PASSWO" --authenticationDatabase "admin" root 계정으로 접속이...</p>
 	  </li>
 
     

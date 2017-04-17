@@ -4,7 +4,7 @@
  <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-04-17T21:43:33+09:00</updated>
+ <updated>2017-04-17T23:22:51+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
@@ -18,7 +18,7 @@
    <link href="http://localhost:4000/database-mid-term"/>
    <id>http://localhost:4000/database-mid-term</id>
    <updated>2017-04-17T00:00:00+09:00</updated>
-   <content type="html">&lt;blockquote&gt; &lt;p&gt;시험에 나올것만 정리 / 안나와도 책임은 안집니당…&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;1장---데이터베이스-시스템&quot;&gt;1장 - 데이터베이스 시스템&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;데이터 베이스 사용자 &lt;ul&gt; &lt;li&gt;&lt;img src=&quot;/img/database-mid-term/5E7E6106-DD19-479F-99CC-23D7648AD337.png&quot; alt=&quot;database-mid-term&quot; /&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;ANSI/SPARC 아키텍쳐와 데이터 독립성 &lt;ul&gt; &lt;li&gt;ANSI/SPARC 아키텍쳐 &lt;ul&gt; &lt;li&gt;&lt;img src=&quot;/img/database-mid-term/5F0EA880-25D4-439F-8FD6-647F458764E9.png&quot; alt=&quot;database-mid-term&quot; /&gt;&lt;/li&gt; &lt;li&gt;각 단계별 설명 &lt;ul&gt; &lt;li&gt;외부 단계 &lt;ul&gt; &lt;li&gt;데이터 베이스의 각 사용자의 뷰&lt;/li&gt; &lt;li&gt;같은...</content>
+   <content type="html">&lt;blockquote&gt; &lt;p&gt;시험에 나올것만 정리 / 안나와도 책임은 안집니당…&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;1장---데이터베이스-시스템&quot;&gt;1장 - 데이터베이스 시스템&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;데이터 베이스 사용자 &lt;ul&gt; &lt;li&gt;&lt;img src=&quot;/img/database-mid-term/F7D941AE-A754-4BC9-856E-9FC47D3EB6BC.png&quot; alt=&quot;database-mid-term&quot; /&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;ANSI/SPARC 아키텍쳐와 데이터 독립성 &lt;ul&gt; &lt;li&gt;ANSI/SPARC 아키텍쳐 &lt;ul&gt; &lt;li&gt;&lt;img src=&quot;/img/database-mid-term/5E7E6106-DD19-479F-99CC-23D7648AD337.png&quot; alt=&quot;database-mid-term&quot; /&gt;&lt;/li&gt; &lt;li&gt;각 단계별 설명 &lt;ul&gt; &lt;li&gt;외부 단계 &lt;ul&gt; &lt;li&gt;데이터 베이스의 각 사용자의 뷰&lt;/li&gt; &lt;li&gt;같은...</content>
  </entry>
 
  
@@ -68,7 +68,7 @@
    <link href="http://localhost:4000/mongodb-auth-correctly"/>
    <id>http://localhost:4000/mongodb-auth-correctly</id>
    <updated>2017-03-07T00:00:00+09:00</updated>
-   <content type="html">&lt;p&gt;mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;use admin &lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;db.createUser&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;user: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_ID&quot;&lt;/span&gt;, &lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_PASSWO&quot;&lt;/span&gt;, roles:[&lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]})&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;mongodb 서버를 재시작 한 후, 외부에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;--auth&lt;/code&gt; 플래그를 주고 root 계정으로 로그인합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo...</content>
+   <content type="html">&lt;p&gt;mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;use admin &lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;db.createUser&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;user: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_ID&quot;&lt;/span&gt;, &lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;ROOT_PASSWO&quot;&lt;/span&gt;, roles: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]})&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;mongodb 서버를 재시작 한 후, 외부에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;--auth&lt;/code&gt; 플래그를 주고 root 계정으로 로그인합니다.&lt;/p&gt; &lt;div class=&quot;language-sh...</content>
  </entry>
 
  
