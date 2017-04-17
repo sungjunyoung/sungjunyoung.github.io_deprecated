@@ -4,12 +4,22 @@
  <title>Junyoung's</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2017-04-12T22:36:04+09:00</updated>
+ <updated>2017-04-17T21:43:11+09:00</updated>
  <author>
    <name>JUNYOUNGBLOG</name>
    <uri></uri>
    <email>wnsdud1861@gmail.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>17-1 학기 데이터베이스 중간고사 정리</title>
+   <link href="http://localhost:4000/database-mid-term"/>
+   <id>http://localhost:4000/database-mid-term</id>
+   <updated>2017-04-17T00:00:00+09:00</updated>
+   <content type="html">&lt;blockquote&gt; &lt;p&gt;시험에 나올것만 정리 / 안나와도 책임은 안집니당…&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;1장---데이터베이스-시스템&quot;&gt;1장 - 데이터베이스 시스템&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;데이터 베이스 사용자 &lt;ul&gt; &lt;li&gt;&lt;img src=&quot;/img/database-mid-term/5E7E6106-DD19-479F-99CC-23D7648AD337.png&quot; alt=&quot;database-mid-term&quot; /&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;ANSI/SPARC 아키텍쳐와 데이터 독립성 &lt;ul&gt; &lt;li&gt;ANSI/SPARC 아키텍쳐 &lt;ul&gt; &lt;li&gt;&lt;img src=&quot;/img/database-mid-term/5F0EA880-25D4-439F-8FD6-647F458764E9.png&quot; alt=&quot;database-mid-term&quot; /&gt;&lt;/li&gt; &lt;li&gt;각 단계별 설명 &lt;ul&gt; &lt;li&gt;외부 단계 &lt;ul&gt; &lt;li&gt;데이터 베이스의 각 사용자의 뷰&lt;/li&gt; &lt;li&gt;같은...</content>
+ </entry>
 
  
 
@@ -34,7 +44,7 @@
  
 
  <entry>
-   <title>Apache Beam</title>
+   <title>Apache Beam 소개</title>
    <link href="http://localhost:4000/apache-beam"/>
    <id>http://localhost:4000/apache-beam</id>
    <updated>2017-03-13T00:00:00+09:00</updated>
