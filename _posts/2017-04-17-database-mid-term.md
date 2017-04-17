@@ -1,6 +1,6 @@
 ---
 title: 17-1 학기 데이터베이스 중간고사 정리
-description: '17-1 학기 데이터베이스 중간고사 나올것만 정리하기'
+descriptiON: '17-1 학기 데이터베이스 중간고사 나올것만 정리하기'
 header: 17-1 학기 데이터베이스 중간고사 정리
 ---
 
@@ -84,16 +84,16 @@ header: 17-1 학기 데이터베이스 중간고사 정리
 		- 유효한 릴레이션은 카디날리티 0을 가질 수 있다.
 	- 차수는 자주 바뀌지 않지만, 카디날리티는 시간이 지남에 따라 계속 변한다.
 - 관계 데이터 모델에서의 내포와 외포
-	- 내포 : 릴레이션 스키마 (relation schema)
+	- 내포 : 릴레이션 스키마 (relatiON schema)
 		- 릴레이션의 이름과 릴레이션의 애트리뷰트들의 집합
 		- 표기법 : 릴레이션이름(<U>애트리뷰트1</U> , 애트리뷰트2, …애트리뷰트N)
 		- 기본 키 애트리뷰트에는 밑줄 표시
-	- 외연 : 릴레이션 인스턴스 (relation instance)
+	- 외연 : 릴레이션 인스턴스 (relatiON instance)
 		- 릴레이션에 어느 시점에 들어있는 튜플의 집합
 		- 시간의 흐름에 따라 계속 변함
 		- 일반적으로 릴레이션에는 현재의 인스턴스만 저장됨
 - 릴레이션의 키
-	- 종류 - 수퍼 키(superkey), 후보 키(candidate key), 기본 키(primary key), 대체 키(alternate key), 외래 키(foreign key)
+	- 종류 - 수퍼 키(superkey), 후보 키(cANDidate key), 기본 키(primary key), 대체 키(alternate key), 외래 키(foreign key)
 	- 수퍼 키
 		- 튜플을 고유하게 식별하는데 꼭 필요하지만은 않은 애트리뷰트
 	- 후보 키
@@ -168,7 +168,7 @@ header: 17-1 학기 데이터베이스 중간고사 정리
 	- LENGTH(string) : 문자열 길이 반환
 	- INSTR(string, string) : 0 에 대해 1의 위치 반환
 	- L/R PAD(string, int, string) : 1 만큼 문자열 길이 늘리고 2로 빈공간 채워서 반환, 좌우정렬
-	- TRIM(string from string) : 1의 앞뒤에서 0을 제외하고 반환
+	- TRIM(string FROM string) : 1의 앞뒤에서 0을 제외하고 반환
 	- REPLACE(string, string, string) : 0에서 1을 찾고 있으면 2로 바꿔서 반환
 
 - 숫자 함수
@@ -186,8 +186,8 @@ header: 17-1 학기 데이터베이스 중간고사 정리
 	- TRUNC : 날짜에서 시간 부분 버림
 
 - 일반 함수
-	- NVL(expression1, expression2) : ex1 값이 NULL 인 경우 ex2 값 반환하며 그렇지 않으면 ex1 값을 반환
-	- NVL2(expression1, expression2, expression3)  : ex1 이 NULL 인 경우 ex3 반환, 아닌경우 ex2 반환
+	- NVL(expressiON1, expressiON2) : ex1 값이 NULL 인 경우 ex2 값 반환하며 그렇지 않으면 ex1 값을 반환
+	- NVL2(expressiON1, expressiON2, expressiON3)  : ex1 이 NULL 인 경우 ex3 반환, 아닌경우 ex2 반환
 
 
 ### 실습 SQL 문들
@@ -196,100 +196,131 @@ header: 17-1 학기 데이터베이스 중간고사 정리
     ```sql
     SELECT * FROM DEPARTMENTS
     ```
-2. Employees 테이블에서 EMPLOYEE_ID 와 성과 이름을 합친것, JOB_ID 와 HIRE_DATE 에 “STARTDATE” 라는 레이블을 붙여서 본다.
+2. EMPLOYEES 테이블에서 EMPLOYEE_ID 와 성과 이름을 합친것, JOB_ID 와 HIRE_DATE 에 “STARTDATE” 라는 레이블을 붙여서 본다.
     ```sql
-    SELECT EMPLOYEE_ID, FIRST_NAME || ' ' || LAST_NAME, JOB_ID, HIRE_DATE AS "STARTDATE" FROM employees;
+    SELECT EMPLOYEE_ID, FIRST_NAME || ' ' || LAST_NAME, JOB_ID, HIRE_DATE AS "STARTDATE"
+	FROM EMPLOYEES;
     ```
-4. 추가예정
+4. EMPLOYEES 테이블에서 성과 이름, JOB_ID 를 합쳐서 "Employee AND Title" 로 레이블을 붙여 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME || ', ' || JOB_ID AS "Employee and Title" FROM employees;
+    SELECT FIRST_NAME || ' ' || LAST_NAME || ', ' || JOB_ID AS "Employee AND Title"
+	FROM EMPLOYEES;
     ```
-5. 추가예정
+5. EMPLOYEES 테이블에서 SALARY 가 12000 이상인 사원의 성과 이름을 합치고 NAME 이라고 레이블 붙인 것과 SALARY 를 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY FROM employees WHERE SALARY > 12000;
+    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY
+	FROM EMPLOYEES
+	WHERE SALARY > 12000;
     ```
-6. 추가예정
+6. EMPLOYEES 테이블에서 EMPLOYEE_ID 가 176인 사원의 성과 이름을 합쳐 NAME 으로 레이블을 붙인 것과, DEPARTMENT_ID 를 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE EMPLOYEE_ID = 176;
+    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID
+	FROM EMPLOYEES
+	WHERE EMPLOYEE_ID = 176;
     ```
-7. 추가예정
+7. EMPLOYEES 테이블에서 SALARY 가 5000미만이거나 12000 초과인 사원의 성과 이름을 합쳐 NAME 으로 레이블 붙인것과 SALARY 를 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY FROM employees WHERE SALARY < 5000 OR SALARY > 12000;
+    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY
+	FROM EMPLOYEES
+	WHERE SALARY < 5000 OR SALARY > 12000;
     ```
-8. 추가예정
+8. EMPLOYEES 테이블에서 DEPARTMENT_ID 가 20 혹은 50인 사원의 성과 이름을 합쳐 NAME 으로 레이블을 붙인 것과 DEPARTMENT_ID 를 FIRST_NAME 으로 정렬하여 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE DEPARTMENT_ID = 20 OR DEPARTMENT_ID = 50 ORDER BY FIRST_NAME;
+    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID
+	FROM EMPLOYEES
+	WHERE DEPARTMENT_ID = 20 OR DEPARTMENT_ID = 50
+	ORDER BY FIRST_NAME;
     ```
-9. 추가예정
+9. EMPLOYEES 테이블에서 MANAGER_ID 가 NULL 인 사원을 성과 이름을 합쳐 NAME 으로 레이블을 붙인 것과 DEPARTMENT_ID 를 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE MANAGER_ID IS NULL
+    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID
+	FROM EMPLOYEES
+	WHERE MANAGER_ID IS NULL
     ```
-10. 추가예정
+10. EMPLOYEES 테이블에서 COMMISSION_PCT 가 NULL 이 아닌 사원의 풀네임(NAME 레이블) 과 SALARY, COMMISSION_PCT를 SALARY에 내림차순, COMMISSION_PCT에 오름차순으로 본다.
     ```sql
-    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY, COMMISSION_PCT FROM employees WHERE COMMISSION_PCT IS NOT NULL ORDER BY SALARY DESC, COMMISSION_PCT DESC;
+    SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY, COMMISSION_PCT
+	FROM EMPLOYEES
+	WHERE COMMISSION_PCT IS NOT NULL
+	ORDER BY SALARY DESC, COMMISSION_PCT DESC;
     ```
-11. 추가예정
+11. 현재시각을 출력한다. (DUAL 은 계산 결과를 위해 임의의 테이블을 만듬)
     ```sql
     SELECT sysdate FROM DUAL
     ```
-12. 추가예정
+12. EMPLOYEES 테이블에서 LAST_NAME 의 첫글자가 'J', 'A', 혹은 'M'인 사원의 이름을 첫글자를 대문자로 나머지는 소문자로 변경것과, 이름의 길이(length_of_LAST_NAME 레이블)을 본다.
     ```sql
-    SELECT INITCAP(last_name) last_name, LENGTH(last_name) length_of_last_name FROM employees WHERE SUBSTR(last_name, 0,1) IN ('J','A','M')
+    SELECT INITCAP(LAST_NAME) LAST_NAME, LENGTH(LAST_NAME) length_of_LAST_NAME
+	FROM EMPLOYEES
+	WHERE SUBSTR(LAST_NAME, 0,1) IN ('J','A','M')
     ```
-13. 추가예정
+13. EMPLOYEES 테이블에서 EMPLOYEE_ID, FIRST_NAME, JOB_ID 가 'AD_PRES' 이면 'A'로, 'ST_MAN'이면 'B'로 ... 변경해 JOB_GRADE 레이블을 붙인 것 을 본다.
     ```sql
-    SELECT employee_id, first_name, job_id, DECODE(job_id, 'AD_PRES', 'A', 'ST_MAN', 'B', 'IT_PROG', 'C', 'SA_REP', 'D', 'ST_CLERK','E','O') job_grade FROM employees
+    SELECT EMPLOYEE_ID, FIRST_NAME, JOB_ID, DECODE(JOB_ID, 'AD_PRES', 'A', 'ST_MAN', 'B', 'IT_PROG', 'C', 'SA_REP', 'D', 'ST_CLERK','E','O') JOB_GRADE
+	FROM EMPLOYEES
     ```
-14. 추가예정
+14. 위와 동일하지만, CASE / END 문 사용
     ```sql
-    SELECT employee_id, first_name, job_id, CASE job_id WHEN 'AD_PRES' THEN 'A' WHEN 'ST_MAN' THEN 'B' WHEN 'IT_PROG' THEN 'C' WHEN 'SA_REP' THEN 'D' WHEN 'ST_CLERK' THEN 'E' ELSE 'O' END AS job_grade FROM employees
+    SELECT EMPLOYEE_ID, FIRST_NAME, JOB_ID,
+	CASE JOB_ID
+		WHEN 'AD_PRES' THEN 'A'
+		WHEN 'ST_MAN' THEN 'B'
+		WHEN 'IT_PROG' THEN 'C'
+		WHEN 'SA_REP' THEN 'D'
+		WHEN 'ST_CLERK' THEN 'E'
+		ELSE 'O'
+	END AS JOB_GRADE
+	FROM EMPLOYEES
     ```
-15. 추가예정
+15. EMPLOYEES 테이블을 e 라 할때, e 와 d 로 라벨링한 DEPARTMENTS 를 e의 DEPARTMENT_ID 와 d의 DEPARTMENT_ID 가 같은 것을 LEFT OUTER JOIN 해서 좌측(e)에 기준을 맞추고 우측(d)는 결과가 없더라도 출력해서 본다.
     ```sql
-    select e.last_name,e.department_id , d.department_name from employees e left outer join departments d on (e.department_id = d.department_id)
+    SELECT e.LAST_NAME,e.DEPARTMENT_ID , d.DEPARTMENT_NAME
+	FROM EMPLOYEES e
+	LEFT OUTER JOIN DEPARTMENTS d ON (e.DEPARTMENT_ID = d.DEPARTMENT_ID)
     ```
-16. 추가예정
+16. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select e.last_name, d.department_name, l.location_id, l.city from employees e
-    join departments d on (e.department_id = d.department_id)
-    join locations l on (d.location_id = l.location_id)
-    where e.commission_pct is not null
+    SELECT e.LAST_NAME, d.DEPARTMENT_NAME, l.LOCATION_ID, l.CITY
+	FROM EMPLOYEES e
+    JOIN DEPARTMENTS d ON (e.DEPARTMENT_ID = d.DEPARTMENT_ID)
+    JOIN LOCATIONS l ON (d.LOCATION_ID = l.LOCATION_ID)
+    WHERE e.COMMISSION_PCT is not null
     ```
-16. 추가예정
+16. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select e.last_name, d.department_name from employees e
-    join departments d on (e.department_id = d.department_id and e.last_name like '%a%')
+    SELECT e.LAST_NAME, d.DEPARTMENT_NAME FROM EMPLOYEES e
+    JOIN DEPARTMENTS d ON (e.DEPARTMENT_ID = d.DEPARTMENT_ID AND e.LAST_NAME LIKE '%a%')
     ```
-17. 추가예정
+17. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select e.last_name, e.job_id, d.department_id, d.department_name from employees e
-    join departments d on (e.department_id = d.department_id)
-    join locations l on (d.location_id = l.location_id and l.city = 'Toronto')
+    SELECT e.LAST_NAME, e.JOB_ID, d.DEPARTMENT_ID, d.DEPARTMENT_NAME FROM EMPLOYEES e
+    JOIN DEPARTMENTS d ON (e.DEPARTMENT_ID = d.DEPARTMENT_ID)
+    JOIN LOCATIONS l ON (d.LOCATION_ID = l.LOCATION_ID AND l.CITY = 'Toronto')
     ```
-18. 추가예정
+18. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select e.first_name, d.department_name, l.location_id, l.city  from employees e
-    join departments d on (e.department_id = d.department_id)
-    join locations l on (l.location_id = d.location_id)
-    where l.city = 'Oxford' and e.commission_pct is not null
+    SELECT e.FIRST_NAME, d.DEPARTMENT_NAME, l.LOCATION_ID, l.CITY  FROM EMPLOYEES e
+    JOIN DEPARTMENTS d ON (e.DEPARTMENT_ID = d.DEPARTMENT_ID)
+    JOIN LOCATIONS l ON (l.LOCATION_ID = d.LOCATION_ID)
+    WHERE l.CITY = 'Oxford' AND e.COMMISSION_PCT is not null
     ```
-19. 추가예정
+19. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select employee_id, first_name, salary, salary * 1.15 as New_Salary from employees
+    SELECT EMPLOYEE_ID, FIRST_NAME, SALARY, SALARY * 1.15 as New_SALARY FROM EMPLOYEES
     ```
-20. 추가예정
+20. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select last_name, NVL(TO_CHAR(commission_pct),'No Commission') COMM from employees
+    SELECT LAST_NAME, NVL(TO_CHAR(COMMISSION_PCT),'No Commission') COMM FROM EMPLOYEES
     ```
-21. 추가예정
+21. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select first_name, job_id, salary from employees where job_id in ('SA_REP','ST_CLERK') and salary not in (2500, 3500, 7000)
+    SELECT FIRST_NAME, JOB_ID, SALARY FROM EMPLOYEES WHERE JOB_ID in ('SA_REP','ST_CLERK') AND SALARY not in (2500, 3500, 7000)
     ```
-22. 추가예정
+22. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select first_name Employee, salary Monthly_Salary from employees where salary >= 5000 and salary <= 12000 and department_id in (20, 50)
+    SELECT FIRST_NAME Employee, SALARY MONthly_SALARY FROM EMPLOYEES WHERE SALARY >= 5000 AND SALARY <= 12000 AND DEPARTMENT_ID in (20, 50)
     ```
-23. 추가예정
+23. 추론해보기 (귀ㅊ..ㄴ...)
     ```sql
-    select first_name from employees where substr(first_name,0, 3) like '%a'
+    SELECT FIRST_NAME FROM EMPLOYEES WHERE SUBSTR(FIRST_NAME,0, 3) LIKE '%a'
     ```
