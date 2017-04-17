@@ -193,103 +193,103 @@ header: 17-1 학기 데이터베이스 중간고사 정리
 ### 실습 SQL 문들 
 
 1. DEPARTMENTS 테이블에서 전체를 본다.
-```sql
-SELECT * FROM DEPARTMENTS 
-```
-2. Employees 테이블에서 EMPLOYEE_ID 와 성과 이름을 합친것, JOB_ID 와 HIRE_DATE 에 “STARTDATE” 라는 레이블을 붙여서 본다.
-```sql
-SELECT EMPLOYEE_ID, FIRST_NAME || ' ' || LAST_NAME, JOB_ID, HIRE_DATE AS "STARTDATE" FROM employees;
-```
-4. 추가예정
+    ```sql
+    SELECT * FROM DEPARTMENTS 
     ```
+2. Employees 테이블에서 EMPLOYEE_ID 와 성과 이름을 합친것, JOB_ID 와 HIRE_DATE 에 “STARTDATE” 라는 레이블을 붙여서 본다.
+    ```sql
+    SELECT EMPLOYEE_ID, FIRST_NAME || ' ' || LAST_NAME, JOB_ID, HIRE_DATE AS "STARTDATE" FROM employees;
+    ```
+4. 추가예정
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME || ', ' || JOB_ID AS "Employee and Title" FROM employees;
     ```
 5. 추가예정
-    ```
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY FROM employees WHERE SALARY > 12000;
     ```
 6. 추가예정
-    ```
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE EMPLOYEE_ID = 176;
     ```
 7. 추가예정
-    ```
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY FROM employees WHERE SALARY < 5000 OR SALARY > 12000;
     ```
 8. 추가예정
-    ```
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE DEPARTMENT_ID = 20 OR DEPARTMENT_ID = 50 ORDER BY FIRST_NAME;
     ```
 9. 추가예정
-    ```
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, DEPARTMENT_ID FROM employees WHERE MANAGER_ID IS NULL
     ```
 10. 추가예정
-    ```
+    ```sql
     SELECT FIRST_NAME || ' ' || LAST_NAME AS NAME, SALARY, COMMISSION_PCT FROM employees WHERE COMMISSION_PCT IS NOT NULL ORDER BY SALARY DESC, COMMISSION_PCT DESC;
     ```
 11. 추가예정
-    ```
+    ```sql
     SELECT sysdate FROM DUAL
     ```
 12. 추가예정
-    ```
+    ```sql
     SELECT INITCAP(last_name) last_name, LENGTH(last_name) length_of_last_name FROM employees WHERE SUBSTR(last_name, 0,1) IN ('J','A','M')
     ```
 13. 추가예정
-    ```
+    ```sql
     SELECT employee_id, first_name, job_id, DECODE(job_id, 'AD_PRES', 'A', 'ST_MAN', 'B', 'IT_PROG', 'C', 'SA_REP', 'D', 'ST_CLERK','E','O') job_grade FROM employees
     ```
 14. 추가예정
-    ```
+    ```sql
     SELECT employee_id, first_name, job_id, CASE job_id WHEN 'AD_PRES' THEN 'A' WHEN 'ST_MAN' THEN 'B' WHEN 'IT_PROG' THEN 'C' WHEN 'SA_REP' THEN 'D' WHEN 'ST_CLERK' THEN 'E' ELSE 'O' END AS job_grade FROM employees
     ```
 15. 추가예정
-    ```
+    ```sql
     select e.last_name,e.department_id , d.department_name from employees e left outer join departments d on (e.department_id = d.department_id)
     ```
 16. 추가예정
-    ```
+    ```sql
     select e.last_name, d.department_name, l.location_id, l.city from employees e
     join departments d on (e.department_id = d.department_id)
     join locations l on (d.location_id = l.location_id)
     where e.commission_pct is not null
     ```
 16. 추가예정
-    ```
+    ```sql
     select e.last_name, d.department_name from employees e
     join departments d on (e.department_id = d.department_id and e.last_name like '%a%')
     ```
 17. 추가예정
-    ```
+    ```sql
     select e.last_name, e.job_id, d.department_id, d.department_name from employees e
     join departments d on (e.department_id = d.department_id)
     join locations l on (d.location_id = l.location_id and l.city = 'Toronto')
     ```
 18. 추가예정
-    ```
+    ```sql
     select e.first_name, d.department_name, l.location_id, l.city  from employees e
     join departments d on (e.department_id = d.department_id)
     join locations l on (l.location_id = d.location_id)
     where l.city = 'Oxford' and e.commission_pct is not null
     ```
 19. 추가예정
-    ```
+    ```sql
     select employee_id, first_name, salary, salary * 1.15 as New_Salary from employees
     ```
 20. 추가예정
-    ```
+    ```sql
     select last_name, NVL(TO_CHAR(commission_pct),'No Commission') COMM from employees
     ```
 21. 추가예정
-    ```
+    ```sql
     select first_name, job_id, salary from employees where job_id in ('SA_REP','ST_CLERK') and salary not in (2500, 3500, 7000)
     ```
 22. 추가예정
-    ```
+    ```sql
     select first_name Employee, salary Monthly_Salary from employees where salary >= 5000 and salary <= 12000 and department_id in (20, 50)
     ```
 23. 추가예정
-    ```
+    ```sql
     select first_name from employees where substr(first_name,0, 3) like '%a'
     ```
