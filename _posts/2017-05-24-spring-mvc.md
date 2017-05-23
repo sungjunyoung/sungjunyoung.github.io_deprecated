@@ -29,3 +29,6 @@ header: Spring MVC 정리
 Controller 구현을 제외한 HandlerMapping, ViewResolver, View 인터페이스를 구현하는 클래스는 스프링 MVC 가 제공하는 정의된 구현 클래스를 활용합니다.
 
 스프링 MVC 는 어플리케이션이 구축하는 구성 정보를 의존관계주입 컨테이너에서 관리합니다. 즉, 스프링 설정 파일로 HandlerMapping 인터페이스를 구현하는 어떤 클래스를 사용하는지 정의하거나, 컨트롤러에서 호출하는 로직을 의존 관계로 주입해 어플리케이션의 구성을 관리합니다.
+
+#### web.xml
+java EE 웹 어플리케이션 기반이 되는 설정 파일입니다. spring mvc의 DispatcherServlet 클래스를 servlet 으로 정의하고, 확장자 .html 에 대한 요청을 모두 DispatcherServlet 클래스에 매핑합니다. 이에 의해 .html 확장자가 붙은 요청은 모두 DispatcherServlet 이 받습니다.
