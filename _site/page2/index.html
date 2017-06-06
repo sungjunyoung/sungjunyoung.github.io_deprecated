@@ -157,6 +157,22 @@
 	
 
 	  <li class="post">
+	  	<h2><a href="/more-usage-lambda-proxy-integration">AWS Lambda Proxy Integration 활용</a></h2>
+      <time datetime="2017-03-07T00:00:00+09:00" class="by-line"> <i>07 Mar 2017</i> </time>
+	  	<p>지금까지 작성한 API 들은 성공이든 실패든 HTTP status 200 OK 를 던져주고 에러 코드나 메세지 등으로 구분하여 작성했습니다. 이번 서비스를 준비하면서 좀더 표준적인 API 설계를 해보고 싶어서 상태 코드로 에러를 분류하는 방법을 시도해 보았고, 고심 끝에 (…) 나온 방법들을 공유합니다. API-Gateway 단의 Integration response 를 커스텀하는 방법과, Lambda Proxy Integration...</p>
+	  </li>
+
+    
+
+	  <li class="post">
+	  	<h2><a href="/mongodb-auth-correctly">mongodb 올바르게 유저 생성하기</a></h2>
+      <time datetime="2017-03-07T00:00:00+09:00" class="by-line"> <i>07 Mar 2017</i> </time>
+	  	<p>mongodb 유저를 생성하기 위해서는 먼저, mongodb 의 root 계정을 만들어야 합니다. &gt; use admin &gt; db.createUser({user: "ROOT_ID", pwd: "ROOT_PASSWO", roles: ["root"]}) mongodb 서버를 재시작 한 후, 외부에서 --auth 플래그를 주고 root 계정으로 로그인합니다. sudo service mongod restart mongo &gt; mongo &lt;host:port&gt; -u "ROOT_ID" -p "ROOT_PASSWO" --authenticationDatabase "admin" root 계정으로 접속이...</p>
+	  </li>
+
+    
+
+	  <li class="post">
 	  	<h2><a href="/config-cors-aws-api-gateway">AWS API Gateway CORS 설정</a></h2>
       <time datetime="2017-03-07T00:00:00+09:00" class="by-line"> <i>07 Mar 2017</i> </time>
 	  	<p>Swagger Editor 에서 Try this operation 을 클릭하면, 이런 안내문구가 나옵니다. CORS 는 Cross-origin resource sharing 의 약자로, 다른 도메인의 서버에 URL 을 호출할 경우 보안상의 문제가 발생하게 되는데, 이 접근을 허용할 수 있게 해주는 메커니즘입니다. Learn more 를 클릭하면 해당 이슈에 대한 자세한 설명을 볼 수 있습니다. 참고) https://github.com/swagger-api/swagger-editor/blob/master/docs/cors.md...</p>

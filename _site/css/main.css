@@ -418,7 +418,7 @@ img[title="Monochrome"] {
 .highlight code {
   color: #f8f8f2; }
 
-p .highlighter-rouge {
+p .highlighter-rouge, li .highlighter-rouge, ul .highlighter-rouge {
   color: #727272;
   background-color: #f2f2f2;
   padding: 1px 3px 1px 3px;
