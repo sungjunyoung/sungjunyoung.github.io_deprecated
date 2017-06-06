@@ -184,3 +184,48 @@ header: 17-1 학기 데이터베이스 기말고사 정리
 
 ### 역정규화
 - 데이터 중복 및 갱신 이상을 대가로 성능상의 요구를 만족시키기 위해 보다 낮은 정규형으로 되돌아가는 것
+
+## SQL
+> 안익숙한 것들만
+### DML
+
+```sql
+INSERT INTO sales_reps(id, name, salary, commission_pct)
+	SELECT employee_id, last_name, salary, commission_pct
+	FROM employees
+	WHERE job_id LIKE '%REP%';
+```
+
+#### Contraints
+
+```sql
+CREATE TABLE employees (
+	employee_id		NUMBER(6),
+	department_id	NUMBER(6),
+	email			VARCHAR2(25),
+	salary			NUMBER(8,2),
+	CONSTRAINT "EMP_EMAIL_UK" UNIQUE(email),
+	CONSTRAINT "DEPT_ID_PK" PRIMARY KEY(employee_id),
+	CONSTRAINT "FK" FOREIGN KEY (department_id)
+		REFERENCES departments(department_id)
+		ON DELETE CASCADE
+	CONSTRAINT "EMP_SALARY_MIN" CHECK (salary > 0)
+)
+```
+
+```sql
+ALTER TABLE employees(
+	ADD CONSTRAINT "EMP_MANAGE_FK"
+		FOREIGN KEY(manager_id)
+		REFERENCES employees(employee_id)
+)
+```
+`CASCADE` : 종속 제약조건 모두 삭제
+```sql
+ALTER TABLE employees
+DISABLE CONSTRAINT "emp_emp_id_pk" CASCADE;
+```
+제약조건 보기
+```sql
+SELECT CONSTRAINT constraint_name, column_name FROM user_cons_columns WHERE table_name = 'EMPLOYEES'
+```
