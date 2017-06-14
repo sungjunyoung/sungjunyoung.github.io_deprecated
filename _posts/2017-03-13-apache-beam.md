@@ -4,7 +4,7 @@ description: 'Apache Beam 소개'
 header: Apache Beam 소개
 ---
 
-![Beam Logo](img/beam_logo_s.png)
+![Beam Logo](img/apache-beam/beam_logo_s.png)
 
 [GSoC](https://summerofcode.withgoogle.com/)에 참가하기 위해 프로젝트 리스트를 보다가 [Apache Beam](https://beam.apache.org/)을 알게되었습니다. Apache Beam 프로젝트는 스트리밍 데이터 처리 작업을 할 수 있도록 프로그래밍 모델을 제공합니다.
 
