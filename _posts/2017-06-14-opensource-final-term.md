@@ -388,6 +388,270 @@ header: 오픈소스 소프트웨어 기말고사 정리
       ```
 
       ```javascript
-      	res.session.destroy(function(err){...})
-      	res.session.destroy(function(err){...})
+          res.session.destroy(function(err){...})
+          res.session.destroy(function(err){...})
       ```
+
+## 9장. Linux
+
+- Operating system : 컴퓨터의 하드웨어와 어플리케이션 간의 인터페이스를 제공하는 소프트웨어
+- Kernel
+
+  - 시스템 모니터
+  - 하드웨어에 대한 액세스 제어 및 중재
+  - 시스템 리소스 스케줄링 / 할당
+
+    - 메모리, CPU, disk, descriptor..
+
+  - 보안
+
+  - 서비스에 대한 유저의 요청에 응답 (system call)
+
+  - Design Goal
+
+    - 효율적이고 빨라야한다.
+    - 견고하고, 탄력적이여야한다.
+    - 기능적이고, 유연하고, 호환성이 있어야한다.
+    - 안전(보안) 해야한다.
+    - 이식성과 확장성이 좋아야 한다.
+
+- Unix 와 Linux
+
+  - 리눅스는 유닉스로부터 파생되어 나왔다.
+
+- 왜 리눅스인가
+
+  - 오픈소스 -> 수정가능성, 확장 가능성
+  - 다수의 플랫폼에서 동작한다.
+  - 여러 버전을 거치면서 견고하다.
+  - 널리 쓰여진다.
+
+- 리눅스의 특징
+
+  - 단단히 짜여지고 하나로 묶여져 잘 정의된 인터페이스를 가진 커널
+  - 멀티태스킹, 다중 사용자관리, 멀티프로세싱
+  - 아키텍쳐 독립성
+  - 디스크 캐시 동적 사이징
+  - 공유 라이브러리
+  - Posix standard support
+  - 여러 실행가능한 포맷
+  - 여러 파일시스템
+  - 여러 네트워크 프로토콜
+
+- Linux distribution
+
+  - redhat, debian, ubuntu, suse...
+  - 각자의 강점들이 있다.
+
+- Linux File and Directory
+
+  - 리눅스의 디렉토리는 하나의 가상화되고 통합된 파일시스템에 포함되어 있다.
+  - 물리적인 장치들은 mount point 에 마운트된다.
+
+    - A:, C: 같은 이름이 없다.
+
+  - Directories
+
+    - boot: 리눅스 커널, 부트로더 설정들 -> 없으면 부팅 불가
+    - bin: 파일시스템에 필요한 기본적인 명령어 존재 -> system startup 시 필요하다.
+    - dev: 하드웨어 컴포넌트, 하드디스크, 키보드.. 모든 장치 파일들. divice driver 와 상호작용한다.
+    - etc: 시스템 설정들. 모든 설정들은 text 파일이며 수정 가능하다.
+    - home: 홈 디렉토리. 각각의 유저는 이름에 해당하는 directory 를 가지고 있다.
+    - lib: 프로그래머와 프로그램에 필요한 라이브러리들. 모든 필수 라이브러리가 있다. startup 시 필요
+    - proc: 커널의 인터페이스(kernel pseudo-directory). special 디렉토리이며 커널 설정, 커널 상태 모니터링 등이 포함
+    - root: 루트의 홈 디렉토리. / 는 파일시스템의 root, /root 는 root 의 홈 디렉토리
+    - sbin: 시스템 설정파일(하드디스크 포맷, 하드웨어 관리) root 만 해당 프로그램을 실행할 수 있다.
+    - tmp: 모든 temp 파일들
+    - usr: 보조 계층구조. 컴파일러, 툴 등 유용한 프로그램들이 포함, startup 시 꼭 필요하진 않다.
+    - var: variable directory. 모든 dynamic file 들을 포함. 유저는 이 파일을 변경할수 없다.
+
+- Permission ![5](/img/opensource-final-term/5.png)
+
+- Utility
+
+  - `pwd`: 현재 디렉토리를 출력한다.
+  - `cd`: 디렉토리 변경
+  - `ls`: 현재 디렉토리에 있는 파일/폴더 들 출력
+  - `mkdir`: 새로운 디렉토리 만들기
+  - `rmdir`: 디렉토리 삭제
+  - `mv`: 파일 옮기기 / 파일 이름변경으로도 사용
+  - `rm`: 파일 삭제
+  - `cat`: 파일의 내용 출력
+  - `cp`: 파일 복사 `-r` 옵션을 사용하면 디렉토리 안에 내용을 재귀적으로 모두 복사
+  - `chmod`: 파일 권한 변경
+  - Metacharacter
+
+    - `*`: 어떤 문자열이든 포함 (.으로 시작되는 파일 제외)
+    - `?`: 길이 1의 어떤 문자
+
+- Process
+
+  - 커널은 각각의 프로그램을 프로세스로 본다.
+  - 종료되었을때 죽엇다(?) 라고한다. (kill)
+  - 프로세스는 각가의 고유한 id(PID)를 가지고 있다.
+  - 타입
+
+    - Init : 모든 프로세스의 부모 프로세스
+    - User Process : end user 에 의해 생성된 프로세스
+    - System process / daemon : 각종 서버들, 로그 서비스..등등
+
+  - 속성
+
+    - PID: 고유한 프로세스 아이디 (Process ID)
+    - PPID: 부모 프로세스의 아이디 (Parent Process ID)
+    - TTY: 프로세스가 연결된(제어되는) 터미널
+    - RUID: 명령을 내린 사용자 (Real User ID)
+    - RGID: 프로세스를 시작한 유저의 그룹 (Real Group ID)
+
+  - Process Utility
+
+    - `top`: 동작중인 시스템의 상태를 리얼타임으로 볼수있음
+    - `ps`: 현재 프로세스의 스냅샷을 출력
+    - `pstree`: 프로세스 트리를 출력
+    - `kill`: 프로세스 죽이기 `kill -9`(종료 시그널)
+    - `&`: 백그라운드에서 커멘드 동작
+
+      - `find / -ctime -1 > changed-file-list.txt 2>&1 &`
+
+    - `Ctrl + C`: foreground 에 실행중인 프로세스 종료
+
+    - `Ctrl + Z`: foreground 에 실행중인 프로세스를 일시 중단
+    - `bg`: 일시중단된 프로세스를 백그라운드로 재시작
+    - `fg`: foreground 에 작업을 배치하고 현재 작업으로 설정 -
+
+- VI
+
+  - Unix 의 에디터
+  - vi 는 text formatter 가 아니다.
+  - Command 모드와 Input 모드가 있다.
+
+    - 시작할때 default 는 command 모드이다.
+    - 여러 키를 입력함으로서 input 모드로 진입할 수 있다.
+    - Esc 를 누름으로서 command 모드로 다시 나올수 있다.
+
+  - 정리
+
+    - Exit from Vi
+
+      - `:q <enter>`: 저장하지 않고 나가기
+      - `:q! <enter>`: 강제로 저장하지 않고 나가기
+      - `:wq <enter>`: 저장 후 종료
+      - `:x <enter>`: 저장 후 종료
+      - `ZZ` : 저장 후 종료
+
+    - Moving Around
+
+      - `h`: 왼쪽
+      - `;`: 오른쪽
+      - `j`: 아래
+      - `k`: 위
+      - `-`: 현재 라인의 첫번째 문자로 커서 이동
+      - `H`: 현재 스크린의 처음으로 커서 이동(Home)
+      - `L`: 현재 스크린의 맨 킽으로 커서 이동 (Last)
+      - `M`: 현재 스크린의 중간으로 커서 이동
+      - `)`: 다음 문장으로 커서 이동
+      - `}`: 다음 문단의 처음으로 커서 이동
+      - `(`: 현재 문장의 맨 뒤로 커서 이동
+      - `{`: 현재 문단의 맨 뒤로 커서 이동
+      - `%`: 매칭되는 괄호로 커서 이동(?)
+      - `Control-d`: 스크린 반 아래로 스크롤 (down)
+      - `Control-u`: 스크린 반 위로 스크롤 (up)
+      - `Control-f`: 스크린 전체 앞으로 스크롤 (full)
+      - `Control-b`: 스크린 전체 뒤로 스크롤 (back)
+
+    - Entering text
+
+      - input 모드로 바꿔야 텍스트를 쓸수 있다.
+      - input 모드로 바꾸려면
+
+        - `a`: 현재 문자의 뒤에서 시작 (append)
+        - `i`: 현재 문자의 앞에서 시작 (insert)
+        - `I`: 현재 열의 맨 앞에서 시작
+        - `o`: 현재 열의 뒤를 한칸 띄우고 시작
+        - `O`: 현재 열의 이전을 한칸 띄우고 시작
+        - `R`: overwrite 모드
+
+      - 텍스트 지우기
+
+        - `x`: 현재 문자 삭제
+        - `d`: 조합해서 사용가능
+
+          - `dw`: 커서부터 띄워쓰기 전까지 삭제
+          - `dd`: 해당 라인 삭제
+          - `d0`: 커서에서 맨 앞까지 삭제
+
+    - Structure of vi command
+
+      - `n<command key(s)` : 예를들어 `5dd` 는 5라인을 삭제
+
+    - Undo and repeat command
+
+      - `u`: undo
+      - `.`: 마지막 명령을 반복수행
+
+    - Copy, cut and paste in vi
+
+      - `yy`: 현재 라인을 버퍼에 복사 (yank)
+      - `nyy`: n 개 라인을 복사
+      - `p`: 아래에 라인을 붙여넣기
+      - `P`: 위에 라인을 붙여넣기
+
+    - Searching for a String
+
+      - `/pattern`: pattern 에 해당하는 문자열 찾기(forwards)
+      - `?pattern`: pattern 에 해당하는 문자열 찾기(backwards)
+      - `(찾은 후)n`: 찾은 다음 문자
+      - `%s/old/new/g`: 파일의 모든 old 문자열을 new 로 변경
+
+    - vi Tricks
+
+      - `4>>`: 4번 스페이스
+      - ...
+
+    - Short cuts ![4](/img/opensource-final-term/4.png)
+
+- Utility
+
+  - `man`: 커멘드의 설명서 출력 (`man ls`)
+  - `date`: 시스템 시간 출력
+  - `wc`: 파일의 newline, word, byte count 출력
+  - `more`: 파일의 전체 컨텐츠를 한페이지로 출력
+  - `less`: 출력된것에서 왓다리 갓다리 가능, 이외 more 와 같다.
+  - `head`: 파일의 처음 10개 줄만 출력
+  - `tail`: 파일의 마지막 10개 줄만 출력
+  - `find`: 파일을 찾는다.
+
+    - `find ./ -name "*.txt"`
+
+  - `grep`: 파일에서 정규식과 일치하는 컨텐츠를 찾는다.
+
+    - `grep "ligyu" file1.txt`
+
+  - `sort`: 텍스트 파일의 라인을 소팅해서 출력한다.
+  - `wget`: 네트워크 다운로더
+
+    - `wget www.google.com -O google.html`
+
+  - Pipe
+
+    - |
+    - 출력을 다른 커멘드의 입력으로 넘길 수 있음
+    - `ls -l | more`
+
+  - Input and Output Redirection
+
+    - 파일로부터 입력을 읽어오기
+
+      - command < filename
+
+    - 출력을 파일로 넘기기
+
+      - command > filename : 출력파일 덮어쓰기
+      - command >> filename : 출력파일에 붙이기
+      - `wc < examples.desktop > output.txt`
+
+  - Compressing / Decompressing files
+
+    - tar, gzip
+
+  - `last`: 마지막으로 로그인한 유저의 리스트를 출력
