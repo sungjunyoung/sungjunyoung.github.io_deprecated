@@ -516,6 +516,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - `Ctrl + C`: foreground 에 실행중인 프로세스 종료
 
     - `Ctrl + Z`: foreground 에 실행중인 프로세스를 일시 중단
+
     - `bg`: 일시중단된 프로세스를 백그라운드로 재시작
     - `fg`: foreground 에 작업을 배치하고 현재 작업으로 설정 -
 
@@ -566,9 +567,9 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
 
         - `a`: 현재 문자의 뒤에서 시작 (append)
         - `i`: 현재 문자의 앞에서 시작 (insert)
-        - `I`: 현재 열의 맨 앞에서 시작
-        - `o`: 현재 열의 뒤를 한칸 띄우고 시작
-        - `O`: 현재 열의 이전을 한칸 띄우고 시작
+        - `I`: 현재 라인의 맨 앞에서 시작
+        - `o`: 현재 라인의 뒤를 한칸 띄우고 시작
+        - `O`: 현재 라인의 이전을 한칸 띄우고 시작
         - `R`: overwrite 모드
 
       - 텍스트 지우기
@@ -628,6 +629,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - `grep "ligyu" file1.txt`
 
   - `sort`: 텍스트 파일의 라인을 소팅해서 출력한다.
+
   - `wget`: 네트워크 다운로더
 
     - `wget www.google.com -O google.html`
@@ -659,5 +661,168 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
 ## 10장. Linux Administration
 
 - 리눅스 부팅 프로세스
-	- 유저가 컴퓨터를 켯을 때 OS 를 시작하는 프로세스
-	- 
+
+  - 유저가 컴퓨터를 켯을 때 OS 를 시작하는 프로세스 ![6](/img/opensource-final-term/6.png)
+  - 부팅 순서
+
+    1. Turn On
+    2. CPU 가 BIOS 의 포인터로 점프 (0xFFFF0)
+    3. BIOS 가 POST 를 실행 (Power-On Self Test)
+    4. bootale device 를 검색
+    5. MBR 로부터 boot sector 를 로드하고 실행
+    6. OS 로드
+
+  - BIOS
+
+    - 칩에 임베디드 된 프로그램
+    - 처음 Power-On 되면 컴퓨터에 의해 실행된다.
+    - BIOS 의 기본기능
+
+      - 컴퓨터를 구성하는 다양한 장치들을 인식하고 제어한다.
+
+  - MBR (Master Boot Record)
+
+    - 디스크의 첫 섹터에 위치함 (512byte)
+    - OS 는 MBR 에 기본 부트로더가 들어있는 하드디스크로부터 부팅된다.
+    - MBR 이 RAM 에 로드된 후, BIOS 는 MBR 를 제어한다. ![7](/img/opensource-final-term/7.png)
+
+      - 첫 446 bytes
+
+        - 기본 부트로더
+        - 실행가능한 코드와 에러메세지 텍스트를 포함
+
+      - 다음 64 bytes
+
+        - 파티션 테이블
+        - 네 파티션 각각의 레코드를 포함
+
+      - 마지막 2 bytes - magic number (0xAA55)
+
+        - MBR의 유효성 검사
+
+  - Bootloader
+
+    - Kernel loader 라고 불린다. - 여기서의 작업은 Linux Kernel 을 로드한다.
+    - GRUB, LILO (가장 대중적인 리눅스 부트로더)
+      - GRUB
+
+        - OS 독립적 부트로더
+        - GNU의 멀티 부팅 소프트웨어 패킷
+        - 파일시스템 접근 / 여러 실행가능한 포맷 지원 / diskless system 지원 / OS 를 네트워크로부터 다운..
+
+  - Kernel Image
+    - Kernel
+      - 컴퓨터가 꺼지기 전까지 항상 메모리에 있다.
+    - Kernel Image
+      - 실행가능한 커널이 아닌 커널 이미지의 압축
+    - zImage
+      - 512KB 이하 사이즈
+    - bzImage
+      - 512KB 이상
+    - 커널 압축 해제 시점 : 커널을 시작하기 전
+    
+  - Init Process
+    - 커널이 시작되면 init program 을 실행
+    - Init : 리눅스의 모든 프로세스의 부모 / `/etc/rc.d/rc.sysinit`을 실행시킴
+    - 적절한 실행 수준을 기반으로 스크립트가 실행되어 시스템을 실행하고 작동하도록 다양한 프로세스를 시작
+    - The Linux Init Process
+      - init process PID : 1
+      - `/etc/inittab` 파일에 정의된대로 시스템 프로세스를 시작
+      - shutdown 시, init 은 sequence 와 process 를 컨트롤
+      
+  - Run-level
+    - 선택된 프로세스 그룹만 존재하도록 허용하는 시스템의 소프트웨어 설정
+    - 각 Run-Level에 대해 init에 의해 생성 된 프로세스는 /etc/init 디렉토리에 정의된 구성 파일
+    - 0~6 runlevel (안외워도..)
+
+  - init.d
+	- admin 이 각각의 daemon 을 시작/실행 할수 있는 디렉토리
+	- example 
+	  - `cd /etc/init.d/`
+	  - `httpd stop`
+	  
+- User Management
+  - Superuser
+    - 모든 권한을 가지고 있는 유저
+    - AKA root
+    - Group number 0
+    - root user 의 수를 제한해야한다.
+      - 숙달되지 않은 유저는 심각한 문제 야기 가능성 / 보안
+    
+  - Creating a new user account
+    - Manual 
+      - `/etc/passwd/`와 `/etc/shadow` 파일에 엔트리 추가
+      - 다음 uid 와 적절한 gid 사용
+    - Command
+      - `useradd`나 `adduser` 커맨드 사용
+      - `useradd -g <group> -d <home directory> -c <comment> -s <shell>`login-name
+      - 새 그룹을 만들기 위해 `groupadd`사용
+    - `/etc/passwd` 파일
+      - 시스템에 의해 인식되는 유저의 리스트
+      - 확장되거나 대체될 수 있는 파일
+      - login 시 사용됨
+        - 시스템이 `/etc/passwd`파일을 찾는다.
+        - 유저의 UID 와 홈 디렉토리를 결정한다.
+        - 파일의 각 행은 한 명의 사용자를 나타내며 콜론으로 구분 된 7 개의 필드를 포함
+        - uid, gid, user에 대한 설명, home directory, shell 등 유저 정보를 포함
+        - 암호화된 패스워드는 `/etc/shadow` 에 
+        
+  - su
+    - switch user
+    - `su [options] [username]`
+    - 해당 유저의 권한으로 새로운 shell 오픈
+    - exit 으로 나갈 수 있다.
+      
+  - sudo
+    - 다른 유저로 커맨드를 실행시킬 수 있다.
+    - `sudo [options] [-u user] command`
+    - `-u` 옵션이 없으면, default 는 root
+    - 이 명령을 실행시킬 수 있게 하려면 해당 유저에게 권한을 부여해야함
+    
+  - useradd / adduser : `useradd -g <group> -s <shell> -c <comment> -d <home dirctory> <username>`
+  - userdel / deluser : `userdel <username>`
+  - `who`: 로그인된 유저를 보여줌
+  - `whoami`: 현재 유저 출력
+  
+- Filesystem Management
+  - `df`: 하나 이상의 파일시스템의 디스크 여유 공간을 출력
+  - `du`: 디렉토리안에 모든 파일이 차지하는 공간을 출력
+  - Mounting file system
+    - 일반적인 파일시스템 마운트
+      1. 디스크 드라이브 포맷
+      2. 디스크 드라이브 파티션
+      3. 파티션 mkfs
+      4. 파일 시스템에 마운트포인트 만들기
+      5. 파일시스템 마운트
+    - `fdisk -l`: 디스크 리스트 출력 
+    - `fdisk /dev/sdb`: 파티션 만들기
+    - `mkfs -t ext4 /dev/sdb1`
+    - 마운트 포인트 만들기 (`mkdir`)
+    - `mount -t ext4 /dev/sdb1`: 마운트
+    - `umount newdisk`: 언마운트
+    
+- Filesystem Check
+  - `fsck`: 파일시스템 체크 (마운트된 파일시스템에서 실행X)
+  
+- Software Package
+  - Package file : 모든 실행가능한 파일과 데이터 파일을 하나의 파일로 묶음
+  - RPM (RedHat 계열) / DEB (Debian 계열)
+  - APT : advanced packaging tool
+    - `sudo apt-get install <package list>`: 패키지 인스톨
+    - `sudo apt-get remove <package list>`: 언인스톨
+    - `sudo apt-get update`: 패키지 업데이트 (최신 패키지가 있는지 확인만)
+    - `sudo apat-get upgrade`: 패키지 업그레이드 (실제로 최신으로 업그레이드)
+    
+- SSH
+  - secure shell
+  - (secure) 리모트 로그인, 리모트 커맨드 실행, 파일 전송 지원
+  - client - server 아키텍쳐 (ssh server program - client program)
+  - 특징
+    - Privacy : 강력한 암호화
+    - Integrity
+    - Authentication : 서버는 호스트 키를 통해, 클라이언트는 패스워드와 public 키를 통해
+    - Authorization
+    - Forwarding : SSH 세션 내 Telnet 과 같은 다른 TCP 기반 서비스 캡슐화
+    
+    
+> 만점받읍시다@
