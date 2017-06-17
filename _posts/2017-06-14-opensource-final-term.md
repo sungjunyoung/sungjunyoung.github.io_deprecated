@@ -723,7 +723,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
 
   - Init Process
     - 커널이 시작되면 init program 을 실행
-    - Init : 리눅스의 모든 프로세스의 부모 / `/etc/rc.d/rc.sysinit`을 실행시킴
+    - Init : 리눅스의 모든 프로세스의 부모 / `/etc/rc.d/rc.sysinit`으로 실행시킴
     - 적절한 실행 수준을 기반으로 스크립트가 실행되어 시스템을 실행하고 작동하도록 다양한 프로세스를 시작
     - The Linux Init Process
       - init process PID : 1
