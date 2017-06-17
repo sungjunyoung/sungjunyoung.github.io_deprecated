@@ -546,7 +546,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
       - `;`: 오른쪽
       - `j`: 아래
       - `k`: 위
-      - `-`: 현재 라인의 첫번째 문자로 커서 이동
+      - `-`: 현재 라인의 위 라인의 처음으로 커서 이동
       - `H`: 현재 스크린의 처음으로 커서 이동(Home)
       - `L`: 현재 스크린의 맨 킽으로 커서 이동 (Last)
       - `M`: 현재 스크린의 중간으로 커서 이동
@@ -720,7 +720,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - bzImage
       - 512KB 이상
     - 커널 압축 해제 시점 : 커널을 시작하기 전
-    
+
   - Init Process
     - 커널이 시작되면 init program 을 실행
     - Init : 리눅스의 모든 프로세스의 부모 / `/etc/rc.d/rc.sysinit`을 실행시킴
@@ -729,7 +729,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
       - init process PID : 1
       - `/etc/inittab` 파일에 정의된대로 시스템 프로세스를 시작
       - shutdown 시, init 은 sequence 와 process 를 컨트롤
-      
+
   - Run-level
     - 선택된 프로세스 그룹만 존재하도록 허용하는 시스템의 소프트웨어 설정
     - 각 Run-Level에 대해 init에 의해 생성 된 프로세스는 /etc/init 디렉토리에 정의된 구성 파일
@@ -737,10 +737,10 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
 
   - init.d
 	- admin 이 각각의 daemon 을 시작/실행 할수 있는 디렉토리
-	- example 
+	- example
 	  - `cd /etc/init.d/`
 	  - `httpd stop`
-	  
+
 - User Management
   - Superuser
     - 모든 권한을 가지고 있는 유저
@@ -748,9 +748,9 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - Group number 0
     - root user 의 수를 제한해야한다.
       - 숙달되지 않은 유저는 심각한 문제 야기 가능성 / 보안
-    
+
   - Creating a new user account
-    - Manual 
+    - Manual
       - `/etc/passwd/`와 `/etc/shadow` 파일에 엔트리 추가
       - 다음 uid 와 적절한 gid 사용
     - Command
@@ -765,25 +765,25 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
         - 유저의 UID 와 홈 디렉토리를 결정한다.
         - 파일의 각 행은 한 명의 사용자를 나타내며 콜론으로 구분 된 7 개의 필드를 포함
         - uid, gid, user에 대한 설명, home directory, shell 등 유저 정보를 포함
-        - 암호화된 패스워드는 `/etc/shadow` 에 
-        
+        - 암호화된 패스워드는 `/etc/shadow` 에
+
   - su
     - switch user
     - `su [options] [username]`
     - 해당 유저의 권한으로 새로운 shell 오픈
     - exit 으로 나갈 수 있다.
-      
+
   - sudo
     - 다른 유저로 커맨드를 실행시킬 수 있다.
     - `sudo [options] [-u user] command`
     - `-u` 옵션이 없으면, default 는 root
     - 이 명령을 실행시킬 수 있게 하려면 해당 유저에게 권한을 부여해야함
-    
+
   - useradd / adduser : `useradd -g <group> -s <shell> -c <comment> -d <home dirctory> <username>`
   - userdel / deluser : `userdel <username>`
   - `who`: 로그인된 유저를 보여줌
   - `whoami`: 현재 유저 출력
-  
+
 - Filesystem Management
   - `df`: 하나 이상의 파일시스템의 디스크 여유 공간을 출력
   - `du`: 디렉토리안에 모든 파일이 차지하는 공간을 출력
@@ -794,16 +794,16 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
       3. 파티션 mkfs
       4. 파일 시스템에 마운트포인트 만들기
       5. 파일시스템 마운트
-    - `fdisk -l`: 디스크 리스트 출력 
+    - `fdisk -l`: 디스크 리스트 출력
     - `fdisk /dev/sdb`: 파티션 만들기
     - `mkfs -t ext4 /dev/sdb1`
     - 마운트 포인트 만들기 (`mkdir`)
     - `mount -t ext4 /dev/sdb1`: 마운트
     - `umount newdisk`: 언마운트
-    
+
 - Filesystem Check
   - `fsck`: 파일시스템 체크 (마운트된 파일시스템에서 실행X)
-  
+
 - Software Package
   - Package file : 모든 실행가능한 파일과 데이터 파일을 하나의 파일로 묶음
   - RPM (RedHat 계열) / DEB (Debian 계열)
@@ -812,7 +812,7 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - `sudo apt-get remove <package list>`: 언인스톨
     - `sudo apt-get update`: 패키지 업데이트 (최신 패키지가 있는지 확인만)
     - `sudo apat-get upgrade`: 패키지 업그레이드 (실제로 최신으로 업그레이드)
-    
+
 - SSH
   - secure shell
   - (secure) 리모트 로그인, 리모트 커맨드 실행, 파일 전송 지원
@@ -823,6 +823,6 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - Authentication : 서버는 호스트 키를 통해, 클라이언트는 패스워드와 public 키를 통해
     - Authorization
     - Forwarding : SSH 세션 내 Telnet 과 같은 다른 TCP 기반 서비스 캡슐화
-    
-    
+
+
 > 만점받읍시다@
