@@ -824,5 +824,82 @@ header: 17-1 학기 오픈소스 소프트웨어 기말고사 정리
     - Authorization
     - Forwarding : SSH 세션 내 Telnet 과 같은 다른 TCP 기반 서비스 캡슐화
 
+## Cloud Computing AWS
+
+- 가상화
+    - 메모리 가상화
+        - 프로세스가 자신의 주소공간이 있다고 생각
+        - MMU (메모리 관리장치) 에 의해 만들어지고 OS 에 의해 설정
+    - 스토리지 가상화
+        - 외부 여유 저장공간
+    - CPU 가상화
+        - 각각의 프로세스가 자신의 CPU 를 가지고 있는것처럼
+        - OS 선점 및 스케줄러에서 생성
+- 머신 가상화
+    - 일반적으로 모든 하드웨어와 입출력장치는 OS 에 의해 관리됨
+    - Machine virtualization
+        - OS 로 부터 하드웨어와 I/O 가상 컨트롤
+        - 실제 컴퓨터를 여러 대의 실제 컴퓨터처럼 작동하도록 분할
+        - 메모리 매핑 조작
+        - 시스템 타이머 세팅
+        - 하나의 시스템에서 다른 시스템으로 전체 OS 및 해당 애플리케이션 마이그레이션
+
+- Privileged vs. unprivileged instruction
+    - 일반적인 어플리케이션은 unprivileged 명령을 사용 : 가상화 쉬움
+    - 일반적인 어플리케이션이 privileged instruction 을 사용하면 트랩
+    - VM 은 트랩을 캐치하고, 명령을 에뮬레이팅함 (Trap & Emulate)
+    
+- Hypervisor
+    - 가상화 담당 프로그램
+    - Virtual Machine Monitor 라고 불림
+    - OS가 하드웨어에 대한 완전한 액세스 권한을 갖는 것처럼 되도록
+    - 물리적 자원에 대한 조정을 중재합니다.
+    - 각 호스트에 대한 일련의 가상 장치 인터페이스를 제공합니다.
+    
+    ![8](/img/opensource-final-term/8.png)
+    
+- Native Virtual Machine
+
+![9](/img/opensource-final-term/9.png)
+
+- Hosted Virtual Machine
+
+![10](/img/opensource-final-term/10.png))
+    
+- Cloud Computing
+    - 클라우드 컴퓨팅은 편리한 온 디맨드를 가능하게하는 모델입니다.
+구성 가능한 공유 풀에 대한 네트워크 액세스
+컴퓨팅 자원 (예를 들어, 네트워크, 서버, 저장 장치,
+애플리케이션 및 서비스)을 신속하게 프로비저닝 할 수 있습니다
+최소한의 관리 노력이나 공급자 상호 작용으로 서비스로 배포할 수 있습니다.
+    - On-Demand self-service
+    - Broad network access
+    - Resource pooling
+    - Rapid elasticity
+
+
 
 > 만점받읍시다@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
