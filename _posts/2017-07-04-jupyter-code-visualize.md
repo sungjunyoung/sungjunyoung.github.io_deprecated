@@ -1,7 +1,7 @@
 ---
 title: Jupyter Notebook 에서 텐서보드 그래프 보기
 description: 'Jupyter Notebook 에서 텐서보드 그래프 보기'
-header: Jupyter Notebook 에서 텐서보드 그래프 보기
+header: Jupyter Notebook 에서 바로 텐서보드 그래프 보기
 ---
 
 > [텐서플로우 공부 중](https://github.com/sungjunyoung/tensorflow-study)에 알게 된 것을 공유합니다.
@@ -14,51 +14,11 @@ header: Jupyter Notebook 에서 텐서보드 그래프 보기
 
 > 출처 - [(stackoverflow) Simple way to visualize a Tensorflow graph in Jupyter?](https://stackoverflow.com/questions/38189119/simple-way-to-visualize-a-tensorflow-graph-in-jupyter)
 
-먼저 1-4 (첫 텐서플로 코드) 장의 코드에서,
+먼저 1-4 (첫 텐서플로 코드 (gist)) 장의 코드에서,
 
 ![1](/img/jupyter-code-visualize/1.png)
 
-맨 앞에 다음의 코드를 삽입한다.
-
-```python
-from IPython.display import clear_output, Image, display, HTML
-import numpy as np
-
-def strip_consts(graph_def, max_const_size=32):
-    """Strip large constant values from graph_def."""
-    strip_def = tf.GraphDef()
-    for n0 in graph_def.node:
-        n = strip_def.node.add()
-        n.MergeFrom(n0)
-        if n.op == 'Const':
-            tensor = n.attr['value'].tensor
-            size = len(tensor.tensor_content)
-            if size > max_const_size:
-                tensor.tensor_content = "<stripped %d bytes>"%size
-    return strip_def
-
-def show_graph(graph_def, max_const_size=32):
-    """Visualize TensorFlow graph."""
-    if hasattr(graph_def, 'as_graph_def'):
-        graph_def = graph_def.as_graph_def()
-    strip_def = strip_consts(graph_def, max_const_size=max_const_size)
-    code = """
-        <script>
-          function load() {{
-            document.getElementById("{id}").pbtxt = {data};
-          }}
-        </script>
-        <link rel="import" href="https://tensorboard.appspot.com/tf-graph-basic.build.html" onload=load()>
-        <div style="height:600px">
-          <tf-graph-basic id="{id}"></tf-graph-basic>
-        </div>
-    """.format(data=repr(str(strip_def)), id='graph'+str(np.random.rand()))
-
-    iframe = """
-        <iframe seamless style="width:1200px;height:620px;border:0" srcdoc="{}"></iframe>
-    """.format(code.replace('"', '&quot;'))
-    display(HTML(iframe))
-```
+맨 앞에 [다음의 코드](https://gist.github.com/sungjunyoung/87fe459d6d78165b20b0cd09366f37fb)를 삽입한다.
 
 그리고 시각화 할 코드라인에 다음으로 호출한다.
 
