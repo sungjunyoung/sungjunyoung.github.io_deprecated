@@ -4,7 +4,7 @@ title: ABOUT
 description: About Junyoung
 ---
 
-![profile](./img/profile-image.png)
+![profile](/img/profile-image.png)
 
 ## Name
 <hr align="left" width="19%" style="border: 0;
