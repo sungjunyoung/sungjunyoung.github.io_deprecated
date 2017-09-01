@@ -13,11 +13,12 @@ description: About Junyoung
 ## Introduction
 \_<br>
 경희대학교 컴퓨터 공학과를 재학중인 평범한 개발자입니다.<br>
-주로 백엔드 개발에 관심이 있다고는 하지만 사실은 프론트엔드도 많이 궁금합니다.<br>
+백엔드 개발에 관심이 많습니다. (사실은 프론트엔드도..) <br>
 
 ## Career
 \_<br>
 - 경희대학교 컴퓨터공학과 - 2012.3 ~ NOW<br>
+- 8기 소프트웨어 마에스트로 연수생 - 2017.08 ~ NOW<br> 
 - 노마드스타 서버개발 인턴 - 2016.8 ~ 2017.3
 
 ## Presentation
@@ -28,11 +29,10 @@ description: About Junyoung
 
 ## Experience
 \_<br>
-- AWS Services - EC2, S3, RDS, Dynamodb, Lambda<br>
-- MEAN stack<br>
+- AWS Services<br>
+- nodejs, React<br>
 - PHP + codeigniter<br>
-- Medium-skilled Java, C++<br>
-- Beginner Python
+- Medium-skilled Java, C++, python<br>
 
 ## Contact
 \_<br>

@@ -18,3 +18,5 @@ google analytics 도 달았구요 ㅎㅎ..<br>
 [thomasvaeth/pleaseDontGo](http://thomasvaeth.com/pleaseDontGo/)를 추가해서 방문자가 다른 탭으로 이동할 시 귀여운(?) 문구도 나타납니다.
 
 많이 놀러들 오세용😃
+
+> 17.09.02) 블로그 포스트를 모두 리셋하였습니다 ! 확실한 관심사와 정확하고 유익한 정보로 돌아옵니다 :)
