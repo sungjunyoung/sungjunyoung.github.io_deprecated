@@ -46,7 +46,6 @@ description: About Junyoung
            border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
 - AWS Services<br>
 - nodejs, React<br>
-- PHP + codeigniter<br>
 - Medium-skilled Java, C++, python<br>
 
 ## Contact
