@@ -69,7 +69,7 @@ master 브랜치에 아무 변경점이 없기 때문에, 그래프가 일자로
 - 이후에, `feature2_bug1` 브랜치의 첫 커밋부터, `comflict` 가 있는지 검사를 하게 됩니다. `comflict` 가 발견되면, 그 지점에서 잠깐 멈춰서 사용자가 해결(`resolve`)해 줄 때까지 임시 브랜치 (그림에서 2c68114) `대기` 하게 됩니다. 아래 그림과 같은 상태가 되죠.
 ![10](/img/git-rebase/10.png) 
 
-그럼 `git` 이 원하는데로 `complict` 를 해결해 줍시다. feature2.txt 파일의 내용을 보게되면, 다음과 같이 파일은 `complict resolve` 를 기다리고 있습니다.
+그럼 `git` 이 원하는데로 `comflict` 를 해결해 줍시다. feature2.txt 파일의 내용을 보게되면, 다음과 같이 파일은 `comflict resolve` 를 기다리고 있습니다.
 
 ![11](/img/git-rebase/11.png) 
 
