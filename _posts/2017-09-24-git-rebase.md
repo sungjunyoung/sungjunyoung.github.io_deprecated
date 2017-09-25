@@ -87,7 +87,7 @@ master 브랜치에 아무 변경점이 없기 때문에, 그래프가 일자로
 ![14](/img/git-rebase/14.png) 
 ![15](/img/git-rebase/15.png) 
 
-충돌을 모두 해결했고, 저희는 다시 임시브랜치가 아닌 `feature2_bug1` 브랜치로 돌아왔습니다. `rebase`가 끝난것이죠. 이제 깔끔하게 `merge` 가 가능한 상태가 되었습니다. `complict` 떄문에 `merge commit` 이 생길 일이 없고, `merge` 한 다음에 `feature2_bug1` 브랜치는 없애버려도 무방하죠. 한번 볼까요?
+충돌을 모두 해결했고, 저희는 다시 임시브랜치가 아닌 `feature2_bug1` 브랜치로 돌아왔습니다. `rebase`가 끝난것이죠. 이제 깔끔하게 `merge` 가 가능한 상태가 되었습니다. `complict` 때문에 `merge commit` 이 생길 일이 없고, `merge` 한 다음에 `feature2_bug1` 브랜치는 없애버려도 무방하죠. 한번 볼까요?
 
 ![17](/img/git-rebase/17.png) 
 
