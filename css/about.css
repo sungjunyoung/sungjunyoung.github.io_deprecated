@@ -12,11 +12,11 @@
     /*border: 1px solid blue;*/
 }
 
-#profile .image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+/*#profile .image {*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*object-fit: contain;*/
+/*}*/
 
 #profile .desc-wrapper {
     float: left;
@@ -35,19 +35,76 @@
     color: #888888;
 }
 
-#profile .introduce{
+#profile .introduce {
     font-size: 1em;
     padding-top: 10px;
     padding-left: 12px;
 }
 
+#divider {
+    text-align: center;
+}
+
 #divider .profile {
-    position: absolute;
+    display: table;
+    margin: 0 auto;
     width: 400px;
     height: 2px;
-    left: 50%;
-    margin-left: -200px;
     border-bottom: 1px solid #ddd;
+}
+
+#career {
+    width: 100%;
+    /*border: 1px solid red;*/
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.title {
+    color: #555;
+    line-height: 30px;
+    border-left: 5px solid #555;
+    margin-left: 40px;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.grid {
+    padding: 20px;
+    overflow: inherit;
+}
+
+.grid-item {
+    /*border: 1px solid #dfdfdf;*/
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.image-wrapper {
+    padding: 8px 8px 8px 8px;
+    margin-bottom: -20px;
+    width: 200px;
+}
+.small {
+    width: 150px;
+}
+
+.grid-term {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.7em;
+}
+
+.grid-title {
+    text-align: center;
+    color: #272727;
 }
 
 /*화면크기 768 이하일때*/
@@ -61,14 +118,53 @@
         font-size: 20px;
     }
 
-    #profile .introduce{
+    #profile .introduce {
         font-size: 0.8em;
     }
 
-
     #divider .profile {
         width: 150px;
-        margin-left: -75px;
     }
 
+    .grid {
+        padding: 8px;
+    }
+
+    .image-wrapper {
+        width: 105px;
+    }
+
+    .grid-title {
+        font-size: 0.8em;
+    }
+
+    .grid-term {
+        font-size: 0.6em;
+    }
+
+    .title {
+        margin-left: 20px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+
+    .small {
+        width: 60px;
+    }
+
+}
+
+/*화면크기 425 이하일때*/
+@media ( max-width: 424px ) {
+    .image-wrapper {
+        width: 95px;
+    }
+
+    .grid-title {
+        font-size: 0.6em;
+    }
+
+    .grid-term {
+        font-size: 0.4em;
+    }
 }
