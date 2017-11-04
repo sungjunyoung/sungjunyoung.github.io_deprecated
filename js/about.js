@@ -97,6 +97,28 @@ $(document).ready(function () {
                     "<img src=\"img/about/nomadstar-3.png\">" +
                     "</div>");
                 break;
+            case 'softcon':
+                $('.modal-date').text('2012.12.19');
+                $('.modal-link').attr("href", "https://www.slideshare.net/SungJunyoung/ss-69345868");
+                $('.modal-title').text("서버의 ㅅ자도 모르던 인턴의 아마존 웹서비스 이전기");
+                $('.modal-subtitle').text("경희대학교 컴퓨터공학과 softcon");
+                $('.modal-desc').text("경희대학교 컴퓨터공학과와 NAVER D2 에서 주관한 " +
+                    "softcon 에서, 인턴쉽을 진행하며 기존 국내 클라우드 서버에서 아마존 웹서비스로 " +
+                    "서버를 이전하면서의 경험을 공유한 경험이 있습니다.");
+                $('.modal-images').append("" +
+                    "<div class=\"modal-image-wrapper\">" +
+                    "<img src=\"img/about/softcon-1.png\">" +
+                    "</div>");
+                $('.modal-images').append("" +
+                    "<div class=\"modal-image-wrapper\">" +
+                    "<img src=\"img/about/softcon-2.png\">" +
+                    "</div>");
+                $('.modal-images').append("" +
+                    "<div class=\"modal-image-wrapper\">" +
+                    "<img src=\"img/about/softcon-3.png\">" +
+                    "</div>");
+                break;
+
         }
 
     }
