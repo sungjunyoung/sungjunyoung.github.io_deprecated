@@ -22,19 +22,21 @@ $(document).ready(function () {
 
 
     $('.grid-item').mouseenter(function () {
-        $(this).find('.grid-term').css("color", "white");
-        $(this).find('.grid-term').css("text-shadow", "-1px 0 #bbb, 0 1px #bbb, 1px 0 #bbb, 0 -1px #bbb");
-        $(this).find('.grid-title').css("color", "white");
-        $(this).find('.grid-title').css("text-shadow", "-1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555");
+        // $(this).find('.grid-term').css("color", "white");
+        // $(this).find('.grid-term').css("text-shadow", "-1px 0 #bbb, 0 1px #bbb, 1px 0 #bbb, 0 -1px #bbb");
+        // $(this).find('.grid-title').css("color", "white");
+        // $(this).find('.grid-title').css("text-shadow", "-1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555");
+        $(this).find('img').css("filter", "brightness(80%)");
         $(this).css('cursor', 'pointer');
     });
 
 
     $('.grid-item').mouseleave(function () {
-        $(this).find('.grid-term').css("color", "#888");
-        $(this).find('.grid-term').css("text-shadow", "");
-        $(this).find('.grid-title').css("color", "#555");
-        $(this).find('.grid-title').css("text-shadow", "");
+        // $(this).find('.grid-term').css("color", "#888");
+        // $(this).find('.grid-term').css("text-shadow", "");
+        // $(this).find('.grid-title').css("color", "#555");
+        // $(this).find('.grid-title').css("text-shadow", "");
+        $(this).find('img').css("filter", "brightness(100%)");
 
     });
 
