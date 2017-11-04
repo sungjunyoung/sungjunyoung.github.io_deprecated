@@ -93,7 +93,7 @@ $(document).ready(function () {
                 $('.modal-subtitle').text("서버개발 인턴");
                 $('.modal-desc').text("반려동물 SNS 인 '쓰담'을 서비스중인 스타트업 '노마드스타'에서" +
                     "약 6개월간 서버개발 인턴으로 일했습니다. AWS 서버이전, 홈페이지 제작, 서버 API 작성, " +
-                    "AWS Lambda 기반 백엔드 아키텍쳐를 구축했습니다.");
+                    "AWS Lambda 기반 백엔드 아키텍쳐 구축 등의 업무를 진행했습니다.");
                 $('.modal-images').append("" +
                     "<div class=\"modal-image-wrapper\">" +
                     "<img src=\"img/about/nomadstar-1.png\">" +
