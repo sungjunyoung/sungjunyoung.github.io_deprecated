@@ -130,10 +130,6 @@
         padding: 8px;
     }
 
-    .image-wrapper {
-        width: 105px;
-    }
-
     .grid-title {
         font-size: 0.8em;
     }
@@ -149,15 +145,18 @@
     }
 
     .small {
-        width: 60px;
+        width: 80px;
     }
 
+    .image-wrapper {
+        width: 150px;
+    }
 }
 
 /*화면크기 425 이하일때*/
 @media ( max-width: 424px ) {
     .image-wrapper {
-        width: 95px;
+        width: 150px;
     }
 
     .grid-title {
