@@ -38,7 +38,7 @@ $text-dark-color: #000000;
 html {
 	background-color: $background-color;
 	font-size: 16px;
-	@media (min-width: 940px) {
+	@media (min-width: 768px) {
 		font-size: 18px;
 	}
 	line-height: 1.5;
@@ -46,7 +46,7 @@ html {
 }
 
 body {
- max-width: 900px;
+ max-width: 768px;
  margin: 0 auto;
  padding: 0 10px;
 }

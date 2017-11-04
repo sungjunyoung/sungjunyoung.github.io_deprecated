@@ -66,7 +66,7 @@ blockquote > :last-child {
     margin-bottom: 0;
 }
 /*- Typography for big screen, based on 18px font-size -*/
-@media (min-width: 940px) {
+@media (min-width: 768px) {
     //Breakpoint set to 940px
 
     ol,

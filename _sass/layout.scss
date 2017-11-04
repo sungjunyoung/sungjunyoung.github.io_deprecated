@@ -9,7 +9,7 @@
     padding: 0.33334em 0;
     font-size: 1.5em;
     font-weight: 400;
-    @media (min-width: 940px) {
+    @media (min-width: 768px) {
       font-size: 1em;
     }
     &:hover {
@@ -40,7 +40,7 @@
 }
 
 #nav-links {
-  @media (max-width: 940px) {
+  @media (max-width: 768px) {
     display:none;
   }
   a {
@@ -65,7 +65,7 @@
 
 #nav-menu {
   @include icon-position(right);
-  @media (min-width: 940px) {
+  @media (min-width: 769px) {
     display:none;
   }
 }
