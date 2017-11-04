@@ -1,14 +1,15 @@
 $(document).ready(function () {
-    $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 10,
-        horizontalOrder: true
+    var $gridContainer = $('.grid');
+    $gridContainer.imagesLoaded(function(){
+
+        $gridContainer.masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 10,
+            horizontalOrder: true
+        });
+
     });
 
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
 
     $('.grid-item').mouseenter(function () {
             $(this).find('.grid-term').css("color", "white");
