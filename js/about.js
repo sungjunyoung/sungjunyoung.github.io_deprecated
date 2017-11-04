@@ -281,6 +281,84 @@ $(document).ready(function () {
                 window.open('https://github.com/sungjunyoung?tab=repositories', '_blank')
                 return false;
                 break;
+            case 'btghackathon':
+                $('.modal-date').text('2013.12.15');
+                $('.modal-link').attr("href", "https://www.facebook.com/b2ghackathon/photos/a.1423976957837645.1073741830.1382490738652934/1423976994504308/?type=3&theater");
+                $('.modal-title').text("Born To Global Hackathon");
+                $('.modal-subtitle').text("특별상");
+                $('.modal-desc').text("KSIA 한국 학생 IT 연합에서 주최하는 Born To Global 해커톤에서, " +
+                    "관심사가 같은 사람끼리 연결해주는 facebook 챗봇을 개발해 특별상을 수상했습니다. " +
+                    "facebook api, python 을 이용하여 작성하였습니다.");
+                $('.modal-tags').append("" +
+                    "<div class=\"modal-tag\">#facebook-api</div>" +
+                    "<div class=\"modal-tag\">#python</div>");
+                break;
+            case 'appjam':
+                $('.modal-date').text('2016.03.26');
+                $('.modal-link').attr("href", "img/about/appjam-result.jpg");
+                $('.modal-title').text("SKT Smarteen Appjam");
+                $('.modal-subtitle').text("장려상");
+                $('.modal-desc').text("세계 각국의 사람들과 언어가 아닌, 손짓과 그림으로 소통하는 감성 " +
+                    "안드로이드 어플리케이션으로 장려상을 수상했습니다. 안드로이드 레이아웃 및 webrtc 연결을 담당하였습니다.");
+                $('.modal-tags').append("" +
+                    "<div class=\"modal-tag\">#android</div>" +
+                    "<div class=\"modal-tag\">#webrtc</div>");
+                break;
+            case 'hueday':
+                $('.modal-date').text('2016.07.08');
+                $('.modal-link').attr("href", "https://m.blog.naver.com/PostView.nhn?blogId=philips_led&logNo=220764934715&proxyReferer=https%3A%2F%2Fwww.facebook.com%2F");
+                $('.modal-title').text("Philips Hue Day");
+                $('.modal-subtitle').text("2등");
+                $('.modal-desc').text("iOS 제작 경험을 토대로, " +
+                    "Philips SDK 와 Instagram SDK 를 사용하여 인스타그램 사진들을 넘기면 어울리는 색상의 조명으로 " +
+                    "바꾸어주는 iOS 어플리케이션인 Huestagram 을 만들어 2등을 수상했습니다.");
+                $('.modal-tags').append("" +
+                    "<div class=\"modal-tag\">#swift</div>" +
+                    "<div class=\"modal-tag\">#ios</div>" +
+                    "<div class=\"modal-tag\">#instagram sdk</div>" +
+                    "<div class=\"modal-tag\">#hue sdk</div>");
+                break;
+            case 'khuthon':
+                $('.modal-date').text('2016.10.10');
+                $('.modal-link').attr("href", "https://thon.khlug.org/about/2016");
+                $('.modal-title').text("교내 해커톤 Khuthon");
+                $('.modal-subtitle').text("우승");
+                $('.modal-desc').text("경희대학교 컴퓨터공학과와 NAVER D2 에서 주최한 교내 해커톤인 Khuthon 에서," +
+                    "학교 종합정보시스템과 연계하여 실제 강의를 수강하는 사람끼리 대화를 주고받을 수 있는 쉿!강의중 이라는 " +
+                    "서비스로 우승을 했습니다. express 기반의 서버 API, firebase 구축을 담당했습니다.");
+                $('.modal-tags').append("" +
+                    "<div class=\"modal-tag\">#android</div>" +
+                    "<div class=\"modal-tag\">#express</div>" +
+                    "<div class=\"modal-tag\">#nodejs</div>" +
+                    "<div class=\"modal-tag\">#firebase</div>");
+                break;
+            case 'openhack':
+                $('.modal-date').text('2017.09.15');
+                $('.modal-link').attr("href", "https://sigoss.github.io/hackathon2017-2/index.html");
+                $('.modal-title').text("소프트웨어 중심대학 오픈소스 해커톤, 오픈핵");
+                $('.modal-subtitle').text("과학기술정보통신부장관상");
+                $('.modal-desc').text("개발자를 위한 URL 공유 사이트를 만들어 우승을 한 경험이 있습니다. " +
+                    "이 서비스(포크레인) 의 특징은 작성하기 버튼이 따로 없고, pull request 를 통해서만 " +
+                    "URL 작성하기(공유하기)가 가능하다는 것입니다. 웹 UI 작성 및 서버 API를 담당했습니다. ");
+                $('.modal-tags').append("" +
+                    "<div class=\"modal-tag\">#express</div>" +
+                    "<div class=\"modal-tag\">#nodejs</div>" +
+                    "<div class=\"modal-tag\">#github</div>");
+                break;
+            case 'khackathon':
+                $('.modal-date').text('2017.11.04');
+                $('.modal-link').attr("href", "/img/about/khackathon-result.jpeg");
+                $('.modal-title').text("대학생 디지털솔루션 챌린지 K-Hackathon");
+                $('.modal-subtitle').text("한국컴퓨터정보학회장상");
+                $('.modal-desc').text("미아를 잃어버린 시점과 현재의 얼굴이 달라 미아를 찾지 못하는 경우가 많은 점에서 " +
+                    "착안하여, 머신러닝을 이용해 미아의 얼굴을 예측해 주는 서비스로 한국컴퓨터정보학회장상을 수상했습니다. " +
+                    "어드민 페이지와 데이터 수집 및 전처리를 담당했습니다.");
+                $('.modal-tags').append("" +
+                    "<div class=\"modal-tag\">#express</div>" +
+                    "<div class=\"modal-tag\">#nodejs</div>" +
+                    "<div class=\"modal-tag\">#react</div>" +
+                    "<div class=\"modal-tag\">#python</div>");
+                break;
 
         }
         return true;
