@@ -1,14 +1,11 @@
 $(document).ready(function () {
 
-    $('.career').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 10
-    });
-    $('.presentation').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 10
-    });
-    $('.projects').masonry({
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+
+    $('.grid').masonry({
         itemSelector: '.grid-item',
         columnWidth: 10
     });
