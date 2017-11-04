@@ -39,7 +39,7 @@
 .modal-tag {
     margin: 3px;
     line-height: 1em;
-    border-radius: 0.8em;
+    border-radius: 0.7em;
     background-color: #272727;
     color: white;
     display: inline-block;
@@ -48,7 +48,7 @@
 
 .modal-godesc {
     margin-top: 10px;
-    line-height: 0.4em;
+    line-height: 0.6em;
     text-align: left;
     font-size: 0.4em;
     color: #aaa;
