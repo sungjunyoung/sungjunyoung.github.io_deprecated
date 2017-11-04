@@ -50,13 +50,13 @@
 /*화면크기 768 이하일때*/
 @media ( max-width: 767px ) {
     .modal-image-wrapper {
-        width: 180px;
+        width: 120px;
     }
 }
 
 /*화면크기 425 이하일때*/
 @media ( max-width: 426px ) {
     .modal-image-wrapper {
-        width: 140px;
+        width: 92px;
     }
 }
