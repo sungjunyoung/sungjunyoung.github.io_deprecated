@@ -1,13 +1,20 @@
 $(document).ready(function () {
 
-    $('.grid').masonry({
+    $('.career').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 10
+    });
+    $('.presentation').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 10
+    });
+    $('.projects').masonry({
         itemSelector: '.grid-item',
         columnWidth: 10
     });
 
+
     $('.grid-item').mouseenter(function () {
-
-
             $(this).find('.grid-term').css("color", "white");
             $(this).find('.grid-term').css("text-shadow", "-1px 0 #888, 0 1px #888, 1px 0 #888, 0 -1px #888");
             $(this).find('.grid-title').css("color", "white");
