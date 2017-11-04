@@ -31,6 +31,23 @@
     text-align: left;
 }
 
+.modal-tags {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.modal-tag {
+    margin-left: 3px;
+    margin-right: 3px;
+    line-height: 1em;
+    border-radius: 0.8em;
+    background-color: #272727;
+    color: white;
+    display: inline-block;
+    padding: 5px 8px 5px 8px;
+
+}
+
 /*화면크기 768 이하일때*/
 @media ( max-width: 767px ) {
     .modal-image-wrapper {
