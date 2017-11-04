@@ -37,8 +37,7 @@
 }
 
 .modal-tag {
-    margin-left: 3px;
-    margin-right: 3px;
+    margin: 3px;
     line-height: 1em;
     border-radius: 0.8em;
     background-color: #272727;

@@ -288,8 +288,12 @@ $(document).ready(function () {
 
     $('.grid-item').click(function () {
         var id = $(this).attr('id');
-        if(setModalText(id))
-            modal.open();
+        if (setModalText(id)) {
+            $modalGridContainer.imagesLoaded(function () {
+                modal.open();
+            })
+        }
+
 
     })
 });
