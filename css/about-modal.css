@@ -44,7 +44,14 @@
     color: white;
     display: inline-block;
     padding: 5px 8px 5px 8px;
+}
 
+.modal-godesc {
+    margin-top: 10px;
+    line-height: 0.4em;
+    text-align: left;
+    font-size: 0.4em;
+    color: #aaa;
 }
 
 /*화면크기 768 이하일때*/

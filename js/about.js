@@ -48,7 +48,7 @@ $(document).ready(function () {
                 $('.modal-title').text("경희대학교 컴퓨터공학과");
                 $('.modal-subtitle').text("3학년 2학기 이후 휴학 중");
                 $('.modal-desc').text("2012년 경희대학교 컴퓨터공학과로 진학하여 2017년 현재까지 공부 중입니다." +
-                    " 컴퓨터공학과 동아리인 T.G.WinG 에 소속되어 있으며 학교앞에서 자취중입니다.");
+                    " 컴퓨터공학과 동아리인 T.G.WinG 에 소속되어 회장, 스터디장을 맡아 활동했습니다.");
                 $('.modal-images').append("" +
                     "<div class=\"modal-image-wrapper\">" +
                     "<img src=\"img/about/khu-1.jpg\">" +
@@ -281,6 +281,7 @@ $(document).ready(function () {
                 window.open('https://github.com/sungjunyoung?tab=repositories', '_blank')
                 return false;
                 break;
+
         }
         return true;
 
