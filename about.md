@@ -38,7 +38,6 @@ description: About Junyoung
 - 경희대학교 주최 소프트콘 - [서버의 ㅅ자도 몰랏던 스타트업 인턴의 아마존 웹서비스 서버 이전기](http://www.slideshare.net/SungJunyoung/ss-69345868)<br>
 - 네이버 D2 Campus Seminar - [텀프로젝트에서 제품프로젝트로](http://www.slideshare.net/deview/ss-72527503)
 
-
 ## Experience
 <hr align="left" width="35%" style="border: 0;
            height: 0;
@@ -46,7 +45,7 @@ description: About Junyoung
            border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
 - AWS Services<br>
 - nodejs, React<br>
-- Medium-skilled Java, C++, python<br>
+- Java, python, C++<br>
 
 ## Contact
 <hr align="left" width="26%" style="border: 0;
@@ -55,3 +54,4 @@ description: About Junyoung
            border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
 - [email](mailto:wnsdud1861@gmail.com)<br>
 - [facebook](https://www.facebook.com/wnsdud1861)<br>
+
