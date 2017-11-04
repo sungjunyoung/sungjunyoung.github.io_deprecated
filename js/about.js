@@ -69,7 +69,8 @@ $(document).ready(function () {
                 $('.modal-subtitle').text("8기 연수생");
                 $('.modal-desc').text("2017년 8월에 SW 마에스트로 연수생으로 들어와 딥러닝 기반 폰트 생성 " +
                     "서비스인 fontto 를 개발하고 있습니다. 서버 아키텍쳐, 프론트엔드를 담당하고 있습니다. " +
-                    "http://fontto.twiiks.co 에서 데모를 구경하실 수 있습니다.");
+                    "http://fontto.twiiks.co 에서 데모를 구경하실 수 있으며, https://github.com/orgs/twiiks/dashboard" +
+                    "에서 제작중인 코드를 보실 수 있습니다.");
                 $('.modal-images').append("" +
                     "<div class=\"modal-image-wrapper\">" +
                     "<img src=\"img/about/swmaestro-1.jpg\">" +
@@ -323,7 +324,7 @@ $(document).ready(function () {
                 $('.modal-link').attr("href", "https://thon.khlug.org/about/2016");
                 $('.modal-title').text("교내 해커톤 Khuthon");
                 $('.modal-subtitle').text("우승");
-                $('.modal-desc').text("경희대학교 컴퓨터공학과와 NAVER D2 에서 주최한 교내 해커톤인 Khuthon 에서," +
+                $('.modal-desc').text("경희대학교 컴퓨터공학과와 NAVER D2 에서 주최한 교내 해커톤인 Khuthon 에서, " +
                     "학교 종합정보시스템과 연계하여 실제 강의를 수강하는 사람끼리 대화를 주고받을 수 있는 쉿!강의중 이라는 " +
                     "서비스로 우승을 했습니다. express 기반의 서버 API, firebase 구축을 담당했습니다.");
                 $('.modal-tags').append("" +
