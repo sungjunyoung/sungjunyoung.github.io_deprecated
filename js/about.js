@@ -98,7 +98,7 @@ $(document).ready(function () {
                     "</div>");
                 break;
             case 'softcon':
-                $('.modal-date').text('2012.12.19');
+                $('.modal-date').text('2016.12.19');
                 $('.modal-link').attr("href", "https://www.slideshare.net/SungJunyoung/ss-69345868");
                 $('.modal-title').text("서버의 ㅅ자도 모르던 인턴의 아마존 웹서비스 이전기");
                 $('.modal-subtitle').text("경희대학교 컴퓨터공학과 softcon");
@@ -116,6 +116,27 @@ $(document).ready(function () {
                 $('.modal-images').append("" +
                     "<div class=\"modal-image-wrapper\">" +
                     "<img src=\"img/about/softcon-3.png\">" +
+                    "</div>");
+                break;
+            case 'campus-seminar':
+                $('.modal-date').text('2017.02.24');
+                $('.modal-link').attr("href", "http://d2.naver.com/news/9930078");
+                $('.modal-title').text("텀프로젝트에서 제품 프로젝트로");
+                $('.modal-subtitle').text("NAVER Campus Seminar");
+                $('.modal-desc').text("NAVER Campus Seminar 에서 학생 연사로, 지금까지" +
+                    " 학교에서 텀 프로젝트만 하다가 실제로 서비스되는 제품에 들어가는 코드를 작성하면서 " +
+                    "경험했던 이야기들을 발표했습니다.");
+                $('.modal-images').append("" +
+                    "<div class=\"modal-image-wrapper\">" +
+                    "<img src=\"img/about/campus-seminar-1.png\">" +
+                    "</div>");
+                $('.modal-images').append("" +
+                    "<div class=\"modal-image-wrapper\">" +
+                    "<img src=\"img/about/campus-seminar-2.png\">" +
+                    "</div>");
+                $('.modal-images').append("" +
+                    "<div class=\"modal-image-wrapper\">" +
+                    "<img src=\"img/about/campus-seminar-3.png\">" +
                     "</div>");
                 break;
 
