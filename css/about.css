@@ -154,7 +154,7 @@
 }
 
 /*화면크기 425 이하일때*/
-@media ( max-width: 424px ) {
+@media ( max-width: 426px ) {
     .image-wrapper {
         width: 150px;
     }

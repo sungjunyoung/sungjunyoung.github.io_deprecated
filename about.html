@@ -5,8 +5,13 @@ description: About Junyoung
 ---
 
 <link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/about-modal.css">
 <script src="js/about.js"></script>
+
+<link rel="stylesheet" href="css/remodal-default-theme.css">
+<link rel="stylesheet" href="css/remodal.css">
 <script src="js/masonry.pkgd.js"></script>
+<script src="js/remodal.min.js"></script>
 
 
 <div id="profile">
@@ -38,7 +43,7 @@ description: About Junyoung
     </div>
 
     <div class="grid">
-        <div id="http://ce.khu.ac.kr/" class="grid-item">
+        <div id="khu" class="grid-item">
             <div class="image-wrapper">
                 <img src="img/about/kyunghee.png">
             </div>
@@ -49,7 +54,7 @@ description: About Junyoung
                 경희대학교<br/>컴퓨터공학과
             </div>
         </div>
-        <div id="http://www.swmaestro.kr/web/web/main.do" class="grid-item">
+        <div id="swmaestro" class="grid-item">
             <div class="image-wrapper">
                 <img src="img/about/swmaestro.jpg">
             </div>
@@ -60,7 +65,7 @@ description: About Junyoung
                 SW마에스트로<br/>8기 연수생
             </div>
         </div>
-        <div id="http://nomadstar.com/nomad/" class="grid-item">
+        <div id="nomadstar" class="grid-item">
             <div class="image-wrapper">
                 <img src="img/about/nomadstar.png">
             </div>
@@ -113,7 +118,7 @@ description: About Junyoung
 
     <div class="grid">
         <div id="https://github.com/sungjunyoung/Airplane" class="grid-item">
-            <div class="image-wrapper small">
+            <div class="image-wrapper">
                 <img src="img/about/airplane-project.png">
             </div>
             <div class="grid-term">
@@ -124,7 +129,7 @@ description: About Junyoung
             </div>
         </div>
         <div id="https://github.com/sungjunyoung/Gggggggguk" class="grid-item">
-            <div class="image-wrapper small">
+            <div class="image-wrapper">
                 <img src="img/about/gggggggguk-project.png">
             </div>
             <div class="grid-term">
@@ -135,7 +140,7 @@ description: About Junyoung
             </div>
         </div>
         <div id="https://github.com/sungjunyoung/FireChatting" class="grid-item">
-            <div class="image-wrapper small">
+            <div class="image-wrapper">
                 <img src="img/about/fbchatting-project.png">
             </div>
             <div class="grid-term">
@@ -179,7 +184,7 @@ description: About Junyoung
             </div>
         </div>
         <div id="https://github.com/sungjunyoung?tab=repositories" class="grid-item">
-            <div class="image-wrapper small">
+            <div class="image-wrapper">
                 <img src="img/about/and-more.png">
             </div>
         </div>
@@ -192,7 +197,8 @@ description: About Junyoung
     </div>
 
     <div class="grid">
-        <div id="https://www.facebook.com/b2ghackathon/photos/a.1423976957837645.1073741830.1382490738652934/1423976994504308/?type=3&theater" class="grid-item">
+        <div id="https://www.facebook.com/b2ghackathon/photos/a.1423976957837645.1073741830.1382490738652934/1423976994504308/?type=3&theater"
+             class="grid-item">
             <div class="image-wrapper">
                 <img src="img/about/btg-award.png">
             </div>
@@ -204,7 +210,7 @@ description: About Junyoung
             </div>
         </div>
         <div id="img/about/appjam-result.jpg" class="grid-item">
-            <div class="image-wrapper small">
+            <div class="image-wrapper">
                 <img src="img/about/appjam-award.png">
             </div>
             <div class="grid-term">
@@ -214,7 +220,8 @@ description: About Junyoung
                 SKT Appjam 장려상
             </div>
         </div>
-        <div id="https://m.blog.naver.com/PostView.nhn?blogId=philips_led&logNo=220764934715&proxyReferer=https%3A%2F%2Fwww.facebook.com%2F" class="grid-item">
+        <div id="https://m.blog.naver.com/PostView.nhn?blogId=philips_led&logNo=220764934715&proxyReferer=https%3A%2F%2Fwww.facebook.com%2F"
+             class="grid-item">
             <div class="image-wrapper">
                 <img src="img/about/hueday-award.png">
             </div>
@@ -262,5 +269,25 @@ description: About Junyoung
                 한국컴퓨터정보학회장상
             </div>
         </div>
+    </div>
+</div>
+
+<div class="modal" data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="modal-date">2017.01.01</div>
+    <a class="modal-link" href=""><div class="modal-title">title</div></a>
+    <div class="modal-subtitle">subtitle</div>
+    <br/>
+
+    <p class="modal-desc">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+    </p>
+
+    <div class="modal-images">
     </div>
 </div>

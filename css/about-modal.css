@@ -1,0 +1,46 @@
+.modal-title {
+    font-size: 30px;
+    text-align: left;
+}
+
+.modal-link {
+    font-size: 0.6em;
+    color: #aaa;
+}
+
+.modal-subtitle {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.modal-date {
+    text-align: left;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.modal-image-wrapper {
+    display:inline-block;
+    padding: 2px 2px 2px 2px;
+    width: 210px;
+    margin-bottom: -20px;
+}
+
+.modal-desc {
+    text-align: left;
+}
+
+/*화면크기 768 이하일때*/
+@media ( max-width: 767px ) {
+    .modal-image-wrapper {
+        width: 180px;
+    }
+}
+
+/*화면크기 425 이하일때*/
+@media ( max-width: 426px ) {
+    .modal-image-wrapper {
+        width: 140px;
+    }
+}
