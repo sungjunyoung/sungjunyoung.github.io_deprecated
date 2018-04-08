@@ -45,7 +45,7 @@ $(document).ready(function () {
         $('.modal-tags').empty();
         switch (id) {
             case 'khu':
-                $('.modal-date').text('2012.03 ~ now');
+                $('.modal-date').text('2012.03 ~ 2019.01');
                 $('.modal-link').attr("href", "http://ce.khu.ac.kr/");
                 $('.modal-title').text("경희대학교 컴퓨터공학과");
                 $('.modal-subtitle').text("3학년 2학기 이후 휴학 중");
@@ -65,12 +65,12 @@ $(document).ready(function () {
                     "</div>");
                 break;
             case 'swmaestro':
-                $('.modal-date').text('2017.08 ~ now');
+                $('.modal-date').text('2017.08 ~ 2017.12');
                 $('.modal-link').attr("href", "http://www.swmaestro.kr/web/web/main.do");
                 $('.modal-title').text("SW 마에스트로");
-                $('.modal-subtitle').text("8기 연수생");
+                $('.modal-subtitle').text("8기 연수생 / 인증자");
                 $('.modal-desc').text("2017년 8월에 SW 마에스트로 연수생으로 들어와 딥러닝 기반 폰트 생성 " +
-                    "서비스인 fontto 를 개발하고 있습니다. 서버 아키텍쳐, 프론트엔드를 담당하고 있습니다. " +
+                    "서비스인 fontto 를 개발했습니다. 서버 아키텍쳐, 프론트엔드를 담당했습니다. " +
                     "http://fontto.twiiks.co 에서 데모를 구경하실 수 있으며, https://github.com/orgs/twiiks/dashboard" +
                     "에서 제작중인 코드를 보실 수 있습니다.");
                 $('.modal-images').append("" +
