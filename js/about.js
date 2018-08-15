@@ -44,6 +44,14 @@ $(document).ready(function () {
         $('.modal-images').empty();
         $('.modal-tags').empty();
         switch (id) {
+            case 'naver':
+                $('.modal-date').text('2017.12 ~ now');
+                $('.modal-link').attr("href", "https://navercorp.com/");
+                $('.modal-title').text("네이버");
+                $('.modal-subtitle').text("PaaS");
+                $('.modal-desc').text("2017년 12월부터 인턴으로 들어와 현재 네이버 PaaS 팀에서 재직중입니다. " +
+                    "네이버 개발자를 위한 스토리지 인프라를 제공하기 위해 달리고 있습니다 :)");
+                break;
             case 'khu':
                 $('.modal-date').text('2012.03 ~ 2019.01');
                 $('.modal-link').attr("href", "http://ce.khu.ac.kr/");
