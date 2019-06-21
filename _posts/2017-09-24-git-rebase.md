@@ -66,28 +66,28 @@ master 브랜치에 아무 변경점이 없기 때문에, 그래프가 일자로
 
 첫번째 줄부터 차근차근 보겠습니다.
 - 먼저 `git`은 `feature2` 브랜치의 최신 커밋으로 가서 `feature2_bug1` 브랜치가 나온 지점부터  붙입니다. 
-- 이후에, `feature2_bug1` 브랜치의 첫 커밋부터, `comflict` 가 있는지 검사를 하게 됩니다. `comflict` 가 발견되면, 그 지점에서 잠깐 멈춰서 사용자가 해결(`resolve`)해 줄 때까지 임시 브랜치 (그림에서 2c68114) `대기` 하게 됩니다. 아래 그림과 같은 상태가 되죠.
+- 이후에, `feature2_bug1` 브랜치의 첫 커밋부터, `conflict` 가 있는지 검사를 하게 됩니다. `conflict` 가 발견되면, 그 지점에서 잠깐 멈춰서 사용자가 해결(`resolve`)해 줄 때까지 임시 브랜치 (그림에서 2c68114) `대기` 하게 됩니다. 아래 그림과 같은 상태가 되죠.
 ![10](/img/git-rebase/10.png) 
 
-그럼 `git` 이 원하는데로 `comflict` 를 해결해 줍시다. feature2.txt 파일의 내용을 보게되면, 다음과 같이 파일은 `comflict resolve` 를 기다리고 있습니다.
+그럼 `git` 이 원하는데로 `conflict` 를 해결해 줍시다. feature2.txt 파일의 내용을 보게되면, 다음과 같이 파일은 `conflict resolve` 를 기다리고 있습니다.
 
 ![11](/img/git-rebase/11.png) 
 
-저희는 `feature2_bug1` 브랜치에서 두번의 커밋을 했고, `rebase`는 이 두개의 커밋을 차례로 흘러가면서 `feature2` 브랜치와 충돌이 있는지 확인할 것입니다. 현재 검사하고 있는 커밋의 충돌을 해결하고 다음 커밋에서 또다시 충돌이 일어나면 해결하고.. 이렇게 `feature2` 브랜치에 `feature2_bug1` 브랜치를 맞춰가는 것이죠. `feature2_bug1` 브랜치의 첫번째 커밋에 대한 `comflict` 를 해결하고, 다음 커밋으로 넘어가겠습니다.
+저희는 `feature2_bug1` 브랜치에서 두번의 커밋을 했고, `rebase`는 이 두개의 커밋을 차례로 흘러가면서 `feature2` 브랜치와 충돌이 있는지 확인할 것입니다. 현재 검사하고 있는 커밋의 충돌을 해결하고 다음 커밋에서 또다시 충돌이 일어나면 해결하고.. 이렇게 `feature2` 브랜치에 `feature2_bug1` 브랜치를 맞춰가는 것이죠. `feature2_bug1` 브랜치의 첫번째 커밋에 대한 `conflict` 를 해결하고, 다음 커밋으로 넘어가겠습니다.
 
 ![12](/img/git-rebase/12.png) 
 ![13](/img/git-rebase/13.png) 
 
-가장 윗줄에 `Applying: feature2 버그수정중 2..` 를 보면 아시듯, 다음 커밋으로 넘어갔습니다! 이번엔 두번째 커밋에 `rebase`가 `comflict` 해결을 기다리며 대기합니다.
+가장 윗줄에 `Applying: feature2 버그수정중 2..` 를 보면 아시듯, 다음 커밋으로 넘어갔습니다! 이번엔 두번째 커밋에 `rebase`가 `conflict` 해결을 기다리며 대기합니다.
 
 ![16](/img/git-rebase/16.png) 
 
-이 커밋이 `feature2_bug1` 브랜치의 마지막 커밋이니, 여기서 또다시 comflict 를 해결해 보겠습니다.
+이 커밋이 `feature2_bug1` 브랜치의 마지막 커밋이니, 여기서 또다시 conflict 를 해결해 보겠습니다.
 
 ![14](/img/git-rebase/14.png) 
 ![15](/img/git-rebase/15.png) 
 
-충돌을 모두 해결했고, 저희는 다시 임시브랜치가 아닌 `feature2_bug1` 브랜치로 돌아왔습니다. `rebase`가 끝난것이죠. 이제 깔끔하게 `merge` 가 가능한 상태가 되었습니다. `comflict` 때문에 `merge commit` 이 생길 일이 없고, `merge` 한 다음에 `feature2_bug1` 브랜치는 없애버려도 무방하죠. 한번 볼까요?
+충돌을 모두 해결했고, 저희는 다시 임시브랜치가 아닌 `feature2_bug1` 브랜치로 돌아왔습니다. `rebase`가 끝난것이죠. 이제 깔끔하게 `merge` 가 가능한 상태가 되었습니다. `conflict` 때문에 `merge commit` 이 생길 일이 없고, `merge` 한 다음에 `feature2_bug1` 브랜치는 없애버려도 무방하죠. 한번 볼까요?
 
 ![17](/img/git-rebase/17.png) 
 
